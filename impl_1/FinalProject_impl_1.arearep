@@ -1,32 +1,41 @@
 ----------------------------------------------------------------------
 Report for cell topvhd.TECH
-Register bits:  106 of 5280 (2.008%)
+Register bits:  109 of 5280 (2.064%)
 I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        94          100.0
-                            FD1P3XZ       106          100.0
+                               CCU2        45          100.0
+                            FD1P3XZ       109          100.0
                          HSOSC_CORE         1          100.0
                                  IB         1          100.0
-                               LUT4       115          100.0
+                               LUT4        98          100.0
                                  OB        10          100.0
                               PLL_B         1          100.0
 SUB MODULES
                          controller         1
+                               game         1
                            lscc_pll         1
                         pattern_gen         1
                                 pll         1
                                 vga         1
-                              TOTAL       333
+                              TOTAL       271
+----------------------------------------------------------------------
+Report for cell game.v1
+Instance Path : GAMER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         3            2.8
+                               LUT4         5            5.1
+                              TOTAL         8
 ----------------------------------------------------------------------
 Report for cell controller.v1
 Instance Path : NES
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        11           11.7
-                            FD1P3XZ        39           36.8
-                               LUT4        22           19.1
-                              TOTAL        72
+                                FA2        11           24.4
+                            FD1P3XZ        39           35.8
+                               LUT4        27           27.6
+                              TOTAL        77
 ----------------------------------------------------------------------
 Report for cell pll.v1
 Instance Path : Hello
@@ -48,15 +57,14 @@ Report for cell pattern_gen.v1
 Instance Path : Hola
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        49           52.1
-                               LUT4        37           32.2
-                              TOTAL        86
+                               LUT4         4            4.1
+                              TOTAL         4
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : Howdy
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        34           36.2
-                            FD1P3XZ        67           63.2
-                               LUT4        49           42.6
-                              TOTAL       150
+                                FA2        34           75.6
+                            FD1P3XZ        67           61.5
+                               LUT4        48           49.0
+                              TOTAL       149

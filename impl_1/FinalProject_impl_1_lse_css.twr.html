@@ -43,7 +43,7 @@ if (a)
 <A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.0.350.6
 
-Sun Apr 21 17:52:44 2019
+Sun Apr 21 18:31:55 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -88,15 +88,15 @@ Performance:     High-Performance_1.2V
 <LI>            <A href=#Timing_rpt_StartEndPointsWithoutTimingConstraints>3.4.2  Start/End Points Without Timing Constraints</A></LI>
 <LI>    <A href=#Timing_rpt_DetailedReport>4  DETAILED REPORT</A></LI>
 <LI>        <A href=#Timing_rpt_SetupDetailedReport>4.1  Setup Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_2>4.1.2  Setup Path Details For Constraint: set_false_path -from [get_clocks clk1] -to [get_clocks clk0]</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_3>4.1.3  Setup Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_4>4.1.4  Setup Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_5>4.1.5  Setup Path Details For Constraint: set_false_path -from [get_clocks clk0] -to [get_clocks clk1]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_2>4.1.2  Setup Path Details For Constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_3>4.1.3  Setup Path Details For Constraint: set_false_path -from [get_clocks clk0] -to [get_clocks clk1]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_4>4.1.4  Setup Path Details For Constraint: set_false_path -from [get_clocks clk1] -to [get_clocks clk0]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_5>4.1.5  Setup Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A></LI>
 <LI>        <A href=#Timing_rpt_HoldDetailedReport>4.2  Hold Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_3>4.2.3  Hold Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_4>4.2.4  Hold Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_2>4.2.2  Hold Path Details For Constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_5>4.2.5  Hold Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A></LI>
 
 =====================================================================
                     End of Table of Contents
@@ -115,104 +115,6 @@ create_clock -name {clk} -period 20.8333333333333 [get_nets clk]
 
 <A name="Timing_rpt_CombinationalLoop"></A><B><U><big>1.2  Combinational Loop</big></U></B>
 
-Combinational Loops
--------------------
-++++ Loop1
-\Hola/add_188_add_4_33/B0	->	\Hola/add_188_add_4_33/S0
-
-++++ Loop2
-\Hola/add_188_add_4_31/B1	->	\Hola/add_188_add_4_31/S1
-
-++++ Loop3
-\Hola/add_188_add_4_31/B0	->	\Hola/add_188_add_4_31/S0
-
-++++ Loop4
-\Hola/add_188_add_4_29/B1	->	\Hola/add_188_add_4_29/S1
-
-++++ Loop5
-\Hola/add_188_add_4_29/B0	->	\Hola/add_188_add_4_29/S0
-
-++++ Loop6
-\Hola/add_188_add_4_27/B1	->	\Hola/add_188_add_4_27/S1
-
-++++ Loop7
-\Hola/add_188_add_4_27/B0	->	\Hola/add_188_add_4_27/S0
-
-++++ Loop8
-\Hola/add_188_add_4_25/B1	->	\Hola/add_188_add_4_25/S1
-
-++++ Loop9
-\Hola/add_188_add_4_25/B0	->	\Hola/add_188_add_4_25/S0
-
-++++ Loop10
-\Hola/add_188_add_4_23/B1	->	\Hola/add_188_add_4_23/S1
-
-++++ Loop11
-\Hola/add_188_add_4_23/B0	->	\Hola/add_188_add_4_23/S0
-
-++++ Loop12
-\Hola/add_188_add_4_21/B1	->	\Hola/add_188_add_4_21/S1
-
-++++ Loop13
-\Hola/add_188_add_4_21/B0	->	\Hola/add_188_add_4_21/S0
-
-++++ Loop14
-\Hola/add_188_add_4_19/B1	->	\Hola/add_188_add_4_19/S1
-
-++++ Loop15
-\Hola/add_188_add_4_19/B0	->	\Hola/add_188_add_4_19/S0
-
-++++ Loop16
-\Hola/add_188_add_4_17/B1	->	\Hola/add_188_add_4_17/S1
-
-++++ Loop17
-\Hola/add_188_add_4_17/B0	->	\Hola/add_188_add_4_17/S0
-
-++++ Loop18
-\Hola/add_188_add_4_15/B1	->	\Hola/add_188_add_4_15/S1
-
-++++ Loop19
-\Hola/add_188_add_4_15/B0	->	\Hola/add_188_add_4_15/S0
-
-++++ Loop20
-\Hola/add_188_add_4_13/B1	->	\Hola/add_188_add_4_13/S1
-
-++++ Loop21
-\Hola/add_188_add_4_13/B0	->	\Hola/add_188_add_4_13/S0
-
-++++ Loop22
-\Hola/add_188_add_4_11/B1	->	\Hola/add_188_add_4_11/S1
-
-++++ Loop23
-\Hola/add_188_add_4_11/B0	->	\Hola/add_188_add_4_11/S0
-
-++++ Loop24
-\Hola/add_188_add_4_9/B1	->	\Hola/add_188_add_4_9/S1
-
-++++ Loop25
-\Hola/add_188_add_4_9/B0	->	\Hola/add_188_add_4_9/S0
-
-++++ Loop26
-\Hola/add_188_add_4_7/B1	->	\Hola/add_188_add_4_7/S1
-
-++++ Loop27
-\Hola/add_188_add_4_7/B0	->	\Hola/add_188_add_4_7/S0
-
-++++ Loop28
-\Hola/add_188_add_4_5/B1	->	\Hola/add_188_add_4_5/S1
-
-++++ Loop29
-\Hola/add_188_add_4_5/B0	->	\Hola/add_188_add_4_5/S0
-
-++++ Loop30
-\Hola/add_188_add_4_3/B1	->	\Hola/add_188_add_4_3/S1
-
-++++ Loop31
-\Hola/add_188_add_4_3/B0	->	\Hola/add_188_add_4_3/S0
-
-++++ Loop32
-\Hola/add_188_add_4_1/B1	->	\Hola/add_188_add_4_1/S1
-
 
 <A name="Timing_rpt_ClockSummary"></A><B><U><big>2  CLOCK SUMMARY</big></U></B>
 
@@ -225,7 +127,7 @@ Single Clock Domain
                Clock clk0               |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From clk0                              |             Target |        1000.000 ns |          1.000 MHz 
-                                        | Actual (all paths) |          35.050 ns |         28.531 MHz 
+                                        | Actual (all paths) |          35.118 ns |         28.475 MHz 
 -------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -244,7 +146,7 @@ Single Clock Domain
                Clock clk1               |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From clk1                              |             Target |        1000.000 ns |          1.000 MHz 
-                                        | Actual (all paths) |           3.386 ns |        295.334 MHz 
+                                        | Actual (all paths) |           3.444 ns |        290.360 MHz 
 -------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -281,7 +183,7 @@ Clock Domain Crossing
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 57.9602%
+Constraint Coverage: 89.6635%
 
 <A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
 
@@ -299,20 +201,20 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>create_clock -name {clk1} -period 1000 </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>[get_nets NESclk_c]</A>                     | 1000.000 ns |  996.614 ns |    2   |    3.386 ns | 295.334 MHz |        8       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>create_clock -name {clk} -period 20.833</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>3333333333 [get_nets clk]</A>               |   20.833 ns |    0.003 ns |    0   |   20.830 ns |  48.008 MHz |        0       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>set_false_path -from [get_clocks clk1] </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>-to [get_clocks clk0]</A>                   |    0.000 ns |    -----    |    0   |        ---- |        ---- |      ----      |       --       
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>create_clock -name {clk1} -period 1000 </A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>[get_nets NESclk_c]</A>                     | 1000.000 ns |  996.556 ns |    2   |    3.444 ns | 290.360 MHz |        8       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>create_clock -name {clk} -period 20.833</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>3333333333 [get_nets clk]</A>               |   20.833 ns |    -----    |    0   |        ---- |        ---- |      ----      |       --       
+<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>set_false_path -from [get_clocks clk0] </A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>-to [get_clocks clk1]</A>                   | 1000.000 ns |    -----    |    7   |        ---- |        ---- |      ----      |       --       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_4"></A><A href=#Timing_rpt_SetupDetailedConstraint_4>create_clock -name {clk0} -period 1000 </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_4"></A><A href=#Timing_rpt_SetupDetailedConstraint_4>[get_nets pll_clock]</A>                    | 1000.000 ns |    -----    |   33   |        ---- |        ---- |      ----      |       --       
+<A name="Timing_rpt_SetupSummaryConstraint_4"></A><A href=#Timing_rpt_SetupDetailedConstraint_4>set_false_path -from [get_clocks clk1] </A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_4"></A><A href=#Timing_rpt_SetupDetailedConstraint_4>-to [get_clocks clk0]</A>                   | 1000.000 ns |    -----    |    4   |        ---- |        ---- |      ----      |       --       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_5"></A><A href=#Timing_rpt_SetupDetailedConstraint_5>set_false_path -from [get_clocks clk0] </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_5"></A><A href=#Timing_rpt_SetupDetailedConstraint_5>-to [get_clocks clk1]</A>                   | 1000.000 ns |    -----    |    7   |        ---- |        ---- |      ----      |       --       
+<A name="Timing_rpt_SetupSummaryConstraint_5"></A><A href=#Timing_rpt_SetupDetailedConstraint_5>create_clock -name {clk0} -period 1000 </A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_5"></A><A href=#Timing_rpt_SetupDetailedConstraint_5>[get_nets pll_clock]</A>                    | 1000.000 ns |    -----    |   33   |        ---- |        ---- |      ----      |       --       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_SetupCriticalEndpointSummary"></A><B><U><big>3.2.2  Setup Critical Endpoint Summary </big></U></B>
@@ -320,16 +222,16 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-\Howdy/countc_266__i32/D                 |  964.950 ns 
-\Howdy/countr__i32/D                     |  965.038 ns 
-\Howdy/countc_266__i31/D                 |  965.966 ns 
-\Howdy/countr__i31/D                     |  966.054 ns 
-\Howdy/countc_266__i30/D                 |  966.982 ns 
-\Howdy/countr__i30/D                     |  967.070 ns 
-\Howdy/countc_266__i29/D                 |  967.998 ns 
-\Howdy/countr__i29/D                     |  968.086 ns 
-\Howdy/countc_266__i28/D                 |  969.014 ns 
-\Howdy/countr__i28/D                     |  969.102 ns 
+\Howdy/countc_125__i32/D                 |  964.882 ns 
+\Howdy/countr__i32/D                     |  965.119 ns 
+\Howdy/countc_125__i31/D                 |  965.898 ns 
+\Howdy/countr__i31/D                     |  966.135 ns 
+\Howdy/countc_125__i30/D                 |  966.914 ns 
+\Howdy/countr__i30/D                     |  967.151 ns 
+\Howdy/countc_125__i29/D                 |  967.930 ns 
+\Howdy/countr__i29/D                     |  968.167 ns 
+\Howdy/countc_125__i28/D                 |  968.946 ns 
+\Howdy/countr__i28/D                     |  969.183 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -345,11 +247,11 @@ Setup # of endpoints with negative slack:|           0
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_clock -name {clk1} -period 1000 </A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>[get_nets NESclk_c]</A>                     |    0.000 ns |    3.079 ns |    2   |        ---- |        ---- |        8       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_clock -name {clk} -period 20.833</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>3333333333 [get_nets clk]</A>               |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>create_clock -name {clk} -period 20.833</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>3333333333 [get_nets clk]</A>               |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>create_clock -name {clk1} -period 1000 </A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>[get_nets NESclk_c]</A>                     |    0.000 ns |    3.079 ns |    2   |        ---- |        ---- |        8       |        0       
                                         |             |             |        |             |             |                |                
 <A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>create_clock -name {clk0} -period 1000 </A>                                                                                                    
 <A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>[get_nets pll_clock]</A>                    |    0.000 ns |    2.210 ns |    1   |        ---- |        ---- |       217      |        0       
@@ -360,16 +262,16 @@ Setup # of endpoints with negative slack:|           0
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-\NES/NEScount_i9/D                       |    2.210 ns 
 \NES/NESclk_68/D                         |    2.210 ns 
 \NES/NEScount_i0/D                       |    2.210 ns 
+\NES/NEScount_i8/D                       |    2.210 ns 
 \NES/NEScount_i1/D                       |    2.210 ns 
 \NES/NEScount_i2/D                       |    2.210 ns 
+\NES/NEScount_i7/D                       |    2.210 ns 
+\NES/NEScount_i5/D                       |    2.210 ns 
 \NES/NEScount_i3/D                       |    2.210 ns 
 \NES/NEScount_i4/D                       |    2.210 ns 
-\NES/NEScount_i5/D                       |    2.210 ns 
 \NES/NEScount_i6/D                       |    2.210 ns 
-\NES/NEScount_i7/D                       |    2.210 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -382,15 +284,18 @@ Hold # of endpoints with negative slack: |           0
 
 Clocked but unconstrained timing start points
 -------------------------------------------------------------------
-         Listing 3 Start Points         |           Type           
+         Listing 6 Start Points         |           Type           
 -------------------------------------------------------------------
-\Howdy/von_39/Q                         |          No required time
+\GAMER/posxout_i1/Q                     |          No required time
 \Howdy/hon_40/Q                         |          No required time
+\GAMER/posxout_i3/Q                     |          No required time
+\Howdy/von_39/Q                         |          No required time
+\GAMER/posxout_i2/Q                     |          No required time
 \Howdy/valid_41/Q                       |          No required time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                         3
+ints                                    |                         6
                                         |                          
 -------------------------------------------------------------------
 
@@ -438,25 +343,45 @@ There is no instance satisfying reporting criteria
 
 <A name="Timing_rpt_DetailedReport"></A><B><U><big>4  DETAILED REPORT</big></U></B>
 <A name="Timing_rpt_SetupDetailedReport"></A><B><U><big>4.1  Setup Detailed Report</big></U></B>
-<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A>
+<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+Minimum Pulse Width Report
+--------------------------
+MPW Cell         : HSOSC_CORE
+MPW Pin          : CLKHF
+MPW Period       : 20.83 ns
+Clock Period     : 20.8333 ns
+Period margin    : 0.00333333 ns  (Passed)
+--------------------------
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<A name="Timing_rpt_SetupDetailedConstraint_2"></A><A href=#Timing_rpt_SetupSummaryConstraint_2>4.1.2  Setup path details for constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A>
 ----------------------------------------------------------------------
 8 endpoints scored, 0 timing errors detected.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \NES/button_i6/Q
-Path End         : \NES/button_i6/D
+Path Begin       : \NES/button_i7/Q
+Path End         : \NES/button_i7/D
 Source Clock     : clk1
 Destination Clock: clk1
 Logic Level      : 2
-Delay Ratio      : 41.4% (route), 58.6% (logic)
+Delay Ratio      : 42.4% (route), 57.6% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 1000.000 ns 
-Path Slack       : 996.614 ns  (Passed)
+Path Slack       : 996.556 ns  (Passed)
 
   Destination Clock Arrival Time (clk1:R#2)   1000.000
 + Destination Clock Source Latency               0.000
@@ -469,31 +394,31 @@ End-of-path required time( ns )               1000.740
   Source Clock Arrival Time (clk1:R#1)   0.000
 + Source Clock Source Latency            0.000
 + Source Clock Path Delay                0.939
-+ Data Path Delay                        3.187
++ Data Path Delay                        3.245
 --------------------------------------   -----
-End-of-path arrival time( ns )           4.126
+End-of-path arrival time( ns )           4.184
 
  
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/button_i6/CK->\NES/button_i6/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  3       
-button_sig[6]                                             NET DELAY      0.819         3.149  1       
-i2124_4_lut/B->i2124_4_lut/Z              LUT4            B_TO_Z_DELAY   0.477         3.626  1       
-n2908                                                     NET DELAY      0.500         4.126  1       
+\NES/button_i7/CK->\NES/button_i7/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  4       
+button_sig[7]                                             NET DELAY      0.877         3.207  1       
+i936_4_lut/B->i936_4_lut/Z                LUT4            B_TO_Z_DELAY   0.477         3.684  1       
+n1265                                                     NET DELAY      0.500         4.184  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
@@ -501,15 +426,15 @@ NESclk_c                                                  NET DELAY      0.939  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \NES/button_i7/Q
-Path End         : \NES/button_i7/D
+Path Begin       : \NES/button_i6/Q
+Path End         : \NES/button_i6/D
 Source Clock     : clk1
 Destination Clock: clk1
 Logic Level      : 2
-Delay Ratio      : 41.4% (route), 58.6% (logic)
+Delay Ratio      : 42.4% (route), 57.6% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 1000.000 ns 
-Path Slack       : 996.614 ns  (Passed)
+Path Slack       : 996.556 ns  (Passed)
 
   Destination Clock Arrival Time (clk1:R#2)   1000.000
 + Destination Clock Source Latency               0.000
@@ -522,31 +447,31 @@ End-of-path required time( ns )               1000.740
   Source Clock Arrival Time (clk1:R#1)   0.000
 + Source Clock Source Latency            0.000
 + Source Clock Path Delay                0.939
-+ Data Path Delay                        3.187
++ Data Path Delay                        3.245
 --------------------------------------   -----
-End-of-path arrival time( ns )           4.126
+End-of-path arrival time( ns )           4.184
 
  
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/button_i7/CK->\NES/button_i7/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  3       
-button_sig[7]                                             NET DELAY      0.819         3.149  1       
-\NES/i11_4_lut/B->\NES/i11_4_lut/Z        LUT4            B_TO_Z_DELAY   0.477         3.626  1       
-\NES/n5344                                                NET DELAY      0.500         4.126  1       
+\NES/button_i6/CK->\NES/button_i6/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  4       
+button_sig[6]                                             NET DELAY      0.877         3.207  1       
+i935_4_lut/B->i935_4_lut/Z                LUT4            B_TO_Z_DELAY   0.477         3.684  1       
+n1264                                                     NET DELAY      0.500         4.184  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
@@ -554,8 +479,8 @@ NESclk_c                                                  NET DELAY      0.939  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \NES/button_i5/Q
-Path End         : \NES/button_i5/D
+Path Begin       : \NES/button_i1/Q
+Path End         : \NES/button_i1/D
 Source Clock     : clk1
 Destination Clock: clk1
 Logic Level      : 2
@@ -583,23 +508,23 @@ End-of-path arrival time( ns )           4.045
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/button_i5/CK->\NES/button_i5/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
-button_sig[5]                                             NET DELAY      0.738         3.068  1       
-i2123_4_lut/B->i2123_4_lut/Z              LUT4            B_TO_Z_DELAY   0.477         3.545  1       
-n2907                                                     NET DELAY      0.500         4.045  1       
+\NES/button_i1/CK->\NES/button_i1/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[1]                                             NET DELAY      0.738         3.068  1       
+i939_4_lut/A->i939_4_lut/Z                LUT4            A_TO_Z_DELAY   0.477         3.545  1       
+n1268                                                     NET DELAY      0.500         4.045  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
@@ -608,490 +533,7 @@ NESclk_c                                                  NET DELAY      0.939  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_SetupDetailedConstraint_2"></A><A href=#Timing_rpt_SetupSummaryConstraint_2>4.1.2  Setup path details for constraint: set_false_path -from [get_clocks clk1] -to [get_clocks clk0]</A>
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-<A name="Timing_rpt_SetupDetailedConstraint_3"></A><A href=#Timing_rpt_SetupSummaryConstraint_3>4.1.3  Setup path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
-Minimum Pulse Width Report
---------------------------
-MPW Cell         : HSOSC_CORE
-MPW Pin          : CLKHF
-MPW Period       : 20.83 ns
-Clock Period     : 20.8333 ns
-Period margin    : 0.00333333 ns  (Passed)
---------------------------
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-<A name="Timing_rpt_SetupDetailedConstraint_4"></A><A href=#Timing_rpt_SetupSummaryConstraint_4>4.1.4  Setup path details for constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A>
-----------------------------------------------------------------------
-217 endpoints scored, 0 timing errors detected.
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
- ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \Howdy/countc_266__i1/Q
-Path End         : \Howdy/countc_266__i32/D
-Source Clock     : clk0
-Destination Clock: clk0
-Logic Level      : 33
-Delay Ratio      : 69.7% (route), 30.3% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 1000.000 ns 
-Path Slack       : 964.950 ns  (Passed)
-
-  Destination Clock Arrival Time (clk0:R#2)   1000.000
-+ Destination Clock Source Latency               0.000
-- Destination Clock Uncertainty                  0.000
-+ Destination Clock Path Delay                   1.416
-- Setup Time                                     0.199
--------------------------------------------   --------
-End-of-path required time( ns )               1001.217
-
-  Source Clock Arrival Time (clk0:R#1)    0.000
-+ Source Clock Source Latency             0.000
-+ Source Clock Path Delay                 1.416
-+ Data Path Delay                        34.851
---------------------------------------   ------
-End-of-path arrival time( ns )           36.267
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\Howdy/countc_266__i1/CK->\Howdy/countc_266__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.807  5       
-colp[0]                                                   NET DELAY         0.921         3.728  1       
-\Howdy/countc_266_add_4_1/C1->\Howdy/countc_266_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         4.072  2       
-\Howdy/n4364                                              NET DELAY         0.738         4.810  1       
-\Howdy/countc_266_add_4_3/CI0->\Howdy/countc_266_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         5.088  2       
-\Howdy/n7718                                              NET DELAY         0.738         5.826  1       
-\Howdy/countc_266_add_4_3/CI1->\Howdy/countc_266_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         6.104  2       
-\Howdy/n4366                                              NET DELAY         0.738         6.842  1       
-\Howdy/countc_266_add_4_5/CI0->\Howdy/countc_266_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         7.120  2       
-\Howdy/n7721                                              NET DELAY         0.738         7.858  1       
-\Howdy/countc_266_add_4_5/CI1->\Howdy/countc_266_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         8.136  2       
-\Howdy/n4368                                              NET DELAY         0.738         8.874  1       
-\Howdy/countc_266_add_4_7/CI0->\Howdy/countc_266_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         9.152  2       
-\Howdy/n7724                                              NET DELAY         0.738         9.890  1       
-\Howdy/countc_266_add_4_7/CI1->\Howdy/countc_266_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        10.168  2       
-\Howdy/n4370                                              NET DELAY         0.738        10.906  1       
-\Howdy/countc_266_add_4_9/CI0->\Howdy/countc_266_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        11.184  2       
-\Howdy/n7727                                              NET DELAY         0.738        11.922  1       
-\Howdy/countc_266_add_4_9/CI1->\Howdy/countc_266_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        12.200  2       
-\Howdy/n4372                                              NET DELAY         0.738        12.938  1       
-\Howdy/countc_266_add_4_11/CI0->\Howdy/countc_266_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        13.216  2       
-\Howdy/n7730                                              NET DELAY         0.738        13.954  1       
-\Howdy/countc_266_add_4_11/CI1->\Howdy/countc_266_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        14.232  2       
-\Howdy/n4374                                              NET DELAY         0.738        14.970  1       
-\Howdy/countc_266_add_4_13/CI0->\Howdy/countc_266_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        15.248  2       
-\Howdy/n7733                                              NET DELAY         0.738        15.986  1       
-\Howdy/countc_266_add_4_13/CI1->\Howdy/countc_266_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        16.264  2       
-\Howdy/n4376                                              NET DELAY         0.738        17.002  1       
-\Howdy/countc_266_add_4_15/CI0->\Howdy/countc_266_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        17.280  2       
-\Howdy/n7736                                              NET DELAY         0.738        18.018  1       
-\Howdy/countc_266_add_4_15/CI1->\Howdy/countc_266_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        18.296  2       
-\Howdy/n4378                                              NET DELAY         0.738        19.034  1       
-\Howdy/countc_266_add_4_17/CI0->\Howdy/countc_266_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        19.312  2       
-\Howdy/n7739                                              NET DELAY         0.738        20.050  1       
-\Howdy/countc_266_add_4_17/CI1->\Howdy/countc_266_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        20.328  2       
-\Howdy/n4380                                              NET DELAY         0.738        21.066  1       
-\Howdy/countc_266_add_4_19/CI0->\Howdy/countc_266_add_4_19/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        21.344  2       
-\Howdy/n7742                                              NET DELAY         0.738        22.082  1       
-\Howdy/countc_266_add_4_19/CI1->\Howdy/countc_266_add_4_19/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        22.360  2       
-\Howdy/n4382                                              NET DELAY         0.738        23.098  1       
-\Howdy/countc_266_add_4_21/CI0->\Howdy/countc_266_add_4_21/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        23.376  2       
-\Howdy/n7745                                              NET DELAY         0.738        24.114  1       
-\Howdy/countc_266_add_4_21/CI1->\Howdy/countc_266_add_4_21/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        24.392  2       
-\Howdy/n4384                                              NET DELAY         0.738        25.130  1       
-\Howdy/countc_266_add_4_23/CI0->\Howdy/countc_266_add_4_23/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        25.408  2       
-\Howdy/n7748                                              NET DELAY         0.738        26.146  1       
-\Howdy/countc_266_add_4_23/CI1->\Howdy/countc_266_add_4_23/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        26.424  2       
-\Howdy/n4386                                              NET DELAY         0.738        27.162  1       
-\Howdy/countc_266_add_4_25/CI0->\Howdy/countc_266_add_4_25/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        27.440  2       
-\Howdy/n7751                                              NET DELAY         0.738        28.178  1       
-\Howdy/countc_266_add_4_25/CI1->\Howdy/countc_266_add_4_25/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        28.456  2       
-\Howdy/n4388                                              NET DELAY         0.738        29.194  1       
-\Howdy/countc_266_add_4_27/CI0->\Howdy/countc_266_add_4_27/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        29.472  2       
-\Howdy/n7754                                              NET DELAY         0.738        30.210  1       
-\Howdy/countc_266_add_4_27/CI1->\Howdy/countc_266_add_4_27/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        30.488  2       
-\Howdy/n4390                                              NET DELAY         0.738        31.226  1       
-\Howdy/countc_266_add_4_29/CI0->\Howdy/countc_266_add_4_29/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        31.504  2       
-\Howdy/n7757                                              NET DELAY         0.738        32.242  1       
-\Howdy/countc_266_add_4_29/CI1->\Howdy/countc_266_add_4_29/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        32.520  2       
-\Howdy/n4392                                              NET DELAY         0.738        33.258  1       
-\Howdy/countc_266_add_4_31/CI0->\Howdy/countc_266_add_4_31/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        33.536  2       
-\Howdy/n7760                                              NET DELAY         0.738        34.274  1       
-\Howdy/countc_266_add_4_31/CI1->\Howdy/countc_266_add_4_31/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        34.552  2       
-\Howdy/n4394                                              NET DELAY         0.738        35.290  1       
-\Howdy/countc_266_add_4_33/D0->\Howdy/countc_266_add_4_33/S0
-                                          FA2             D0_TO_S0_DELAY    0.477        35.767  1       
-\Howdy/n134_adj_408                                       NET DELAY         0.500        36.267  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \Howdy/countr__i1/Q
-Path End         : \Howdy/countr__i32/D
-Source Clock     : clk0
-Destination Clock: clk0
-Logic Level      : 33
-Delay Ratio      : 69.6% (route), 30.4% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 1000.000 ns 
-Path Slack       : 965.038 ns  (Passed)
-
-  Destination Clock Arrival Time (clk0:R#2)   1000.000
-+ Destination Clock Source Latency               0.000
-- Destination Clock Uncertainty                  0.000
-+ Destination Clock Path Delay                   1.416
-- Setup Time                                     0.199
--------------------------------------------   --------
-End-of-path required time( ns )               1001.217
-
-  Source Clock Arrival Time (clk0:R#1)    0.000
-+ Source Clock Source Latency             0.000
-+ Source Clock Path Delay                 1.416
-+ Data Path Delay                        34.763
---------------------------------------   ------
-End-of-path arrival time( ns )           36.179
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\Howdy/countr__i1/CK->\Howdy/countr__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.807  3       
-rowp[0]                                                   NET DELAY         0.819         3.626  1       
-\Howdy/add_11_add_4_1/B1->\Howdy/add_11_add_4_1/CO1
-                                          FA2             B1_TO_CO1_DELAY   0.358         3.984  2       
-\Howdy/n4269                                              NET DELAY         0.738         4.722  1       
-\Howdy/add_11_add_4_3/CI0->\Howdy/add_11_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         5.000  2       
-\Howdy/n7766                                              NET DELAY         0.738         5.738  1       
-\Howdy/add_11_add_4_3/CI1->\Howdy/add_11_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         6.016  2       
-\Howdy/n4271                                              NET DELAY         0.738         6.754  1       
-\Howdy/add_11_add_4_5/CI0->\Howdy/add_11_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         7.032  2       
-\Howdy/n7769                                              NET DELAY         0.738         7.770  1       
-\Howdy/add_11_add_4_5/CI1->\Howdy/add_11_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         8.048  2       
-\Howdy/n4273                                              NET DELAY         0.738         8.786  1       
-\Howdy/add_11_add_4_7/CI0->\Howdy/add_11_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         9.064  2       
-\Howdy/n7772                                              NET DELAY         0.738         9.802  1       
-\Howdy/add_11_add_4_7/CI1->\Howdy/add_11_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        10.080  2       
-\Howdy/n4275                                              NET DELAY         0.738        10.818  1       
-\Howdy/add_11_add_4_9/CI0->\Howdy/add_11_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        11.096  2       
-\Howdy/n7775                                              NET DELAY         0.738        11.834  1       
-\Howdy/add_11_add_4_9/CI1->\Howdy/add_11_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        12.112  2       
-\Howdy/n4277                                              NET DELAY         0.738        12.850  1       
-\Howdy/add_11_add_4_11/CI0->\Howdy/add_11_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        13.128  2       
-\Howdy/n7778                                              NET DELAY         0.738        13.866  1       
-\Howdy/add_11_add_4_11/CI1->\Howdy/add_11_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        14.144  2       
-\Howdy/n4279                                              NET DELAY         0.738        14.882  1       
-\Howdy/add_11_add_4_13/CI0->\Howdy/add_11_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        15.160  2       
-\Howdy/n7781                                              NET DELAY         0.738        15.898  1       
-\Howdy/add_11_add_4_13/CI1->\Howdy/add_11_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        16.176  2       
-\Howdy/n4281                                              NET DELAY         0.738        16.914  1       
-\Howdy/add_11_add_4_15/CI0->\Howdy/add_11_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        17.192  2       
-\Howdy/n7784                                              NET DELAY         0.738        17.930  1       
-\Howdy/add_11_add_4_15/CI1->\Howdy/add_11_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        18.208  2       
-\Howdy/n4283                                              NET DELAY         0.738        18.946  1       
-\Howdy/add_11_add_4_17/CI0->\Howdy/add_11_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        19.224  2       
-\Howdy/n7787                                              NET DELAY         0.738        19.962  1       
-\Howdy/add_11_add_4_17/CI1->\Howdy/add_11_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        20.240  2       
-\Howdy/n4285                                              NET DELAY         0.738        20.978  1       
-\Howdy/add_11_add_4_19/CI0->\Howdy/add_11_add_4_19/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        21.256  2       
-\Howdy/n7790                                              NET DELAY         0.738        21.994  1       
-\Howdy/add_11_add_4_19/CI1->\Howdy/add_11_add_4_19/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        22.272  2       
-\Howdy/n4287                                              NET DELAY         0.738        23.010  1       
-\Howdy/add_11_add_4_21/CI0->\Howdy/add_11_add_4_21/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        23.288  2       
-\Howdy/n7793                                              NET DELAY         0.738        24.026  1       
-\Howdy/add_11_add_4_21/CI1->\Howdy/add_11_add_4_21/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        24.304  2       
-\Howdy/n4289                                              NET DELAY         0.738        25.042  1       
-\Howdy/add_11_add_4_23/CI0->\Howdy/add_11_add_4_23/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        25.320  2       
-\Howdy/n7796                                              NET DELAY         0.738        26.058  1       
-\Howdy/add_11_add_4_23/CI1->\Howdy/add_11_add_4_23/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        26.336  2       
-\Howdy/n4291                                              NET DELAY         0.738        27.074  1       
-\Howdy/add_11_add_4_25/CI0->\Howdy/add_11_add_4_25/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        27.352  2       
-\Howdy/n7799                                              NET DELAY         0.738        28.090  1       
-\Howdy/add_11_add_4_25/CI1->\Howdy/add_11_add_4_25/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        28.368  2       
-\Howdy/n4293                                              NET DELAY         0.738        29.106  1       
-\Howdy/add_11_add_4_27/CI0->\Howdy/add_11_add_4_27/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        29.384  2       
-\Howdy/n7802                                              NET DELAY         0.738        30.122  1       
-\Howdy/add_11_add_4_27/CI1->\Howdy/add_11_add_4_27/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        30.400  2       
-\Howdy/n4295                                              NET DELAY         0.738        31.138  1       
-\Howdy/add_11_add_4_29/CI0->\Howdy/add_11_add_4_29/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        31.416  2       
-\Howdy/n7805                                              NET DELAY         0.738        32.154  1       
-\Howdy/add_11_add_4_29/CI1->\Howdy/add_11_add_4_29/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        32.432  2       
-\Howdy/n4297                                              NET DELAY         0.738        33.170  1       
-\Howdy/add_11_add_4_31/CI0->\Howdy/add_11_add_4_31/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        33.448  2       
-\Howdy/n7808                                              NET DELAY         0.738        34.186  1       
-\Howdy/add_11_add_4_31/CI1->\Howdy/add_11_add_4_31/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        34.464  2       
-\Howdy/n4299                                              NET DELAY         0.738        35.202  1       
-\Howdy/add_11_add_4_33/D0->\Howdy/add_11_add_4_33/S0
-                                          FA2             D0_TO_S0_DELAY    0.477        35.679  1       
-\Howdy/n68                                                NET DELAY         0.500        36.179  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-
-
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \Howdy/countc_266__i1/Q
-Path End         : \Howdy/countc_266__i31/D
-Source Clock     : clk0
-Destination Clock: clk0
-Logic Level      : 32
-Delay Ratio      : 69.6% (route), 30.4% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 1000.000 ns 
-Path Slack       : 965.966 ns  (Passed)
-
-  Destination Clock Arrival Time (clk0:R#2)   1000.000
-+ Destination Clock Source Latency               0.000
-- Destination Clock Uncertainty                  0.000
-+ Destination Clock Path Delay                   1.416
-- Setup Time                                     0.199
--------------------------------------------   --------
-End-of-path required time( ns )               1001.217
-
-  Source Clock Arrival Time (clk0:R#1)    0.000
-+ Source Clock Source Latency             0.000
-+ Source Clock Path Delay                 1.416
-+ Data Path Delay                        33.835
---------------------------------------   ------
-End-of-path arrival time( ns )           35.251
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\Howdy/countc_266__i1/CK->\Howdy/countc_266__i1/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.807  5       
-colp[0]                                                   NET DELAY         0.921         3.728  1       
-\Howdy/countc_266_add_4_1/C1->\Howdy/countc_266_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         4.072  2       
-\Howdy/n4364                                              NET DELAY         0.738         4.810  1       
-\Howdy/countc_266_add_4_3/CI0->\Howdy/countc_266_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         5.088  2       
-\Howdy/n7718                                              NET DELAY         0.738         5.826  1       
-\Howdy/countc_266_add_4_3/CI1->\Howdy/countc_266_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         6.104  2       
-\Howdy/n4366                                              NET DELAY         0.738         6.842  1       
-\Howdy/countc_266_add_4_5/CI0->\Howdy/countc_266_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         7.120  2       
-\Howdy/n7721                                              NET DELAY         0.738         7.858  1       
-\Howdy/countc_266_add_4_5/CI1->\Howdy/countc_266_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         8.136  2       
-\Howdy/n4368                                              NET DELAY         0.738         8.874  1       
-\Howdy/countc_266_add_4_7/CI0->\Howdy/countc_266_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         9.152  2       
-\Howdy/n7724                                              NET DELAY         0.738         9.890  1       
-\Howdy/countc_266_add_4_7/CI1->\Howdy/countc_266_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        10.168  2       
-\Howdy/n4370                                              NET DELAY         0.738        10.906  1       
-\Howdy/countc_266_add_4_9/CI0->\Howdy/countc_266_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        11.184  2       
-\Howdy/n7727                                              NET DELAY         0.738        11.922  1       
-\Howdy/countc_266_add_4_9/CI1->\Howdy/countc_266_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        12.200  2       
-\Howdy/n4372                                              NET DELAY         0.738        12.938  1       
-\Howdy/countc_266_add_4_11/CI0->\Howdy/countc_266_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        13.216  2       
-\Howdy/n7730                                              NET DELAY         0.738        13.954  1       
-\Howdy/countc_266_add_4_11/CI1->\Howdy/countc_266_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        14.232  2       
-\Howdy/n4374                                              NET DELAY         0.738        14.970  1       
-\Howdy/countc_266_add_4_13/CI0->\Howdy/countc_266_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        15.248  2       
-\Howdy/n7733                                              NET DELAY         0.738        15.986  1       
-\Howdy/countc_266_add_4_13/CI1->\Howdy/countc_266_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        16.264  2       
-\Howdy/n4376                                              NET DELAY         0.738        17.002  1       
-\Howdy/countc_266_add_4_15/CI0->\Howdy/countc_266_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        17.280  2       
-\Howdy/n7736                                              NET DELAY         0.738        18.018  1       
-\Howdy/countc_266_add_4_15/CI1->\Howdy/countc_266_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        18.296  2       
-\Howdy/n4378                                              NET DELAY         0.738        19.034  1       
-\Howdy/countc_266_add_4_17/CI0->\Howdy/countc_266_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        19.312  2       
-\Howdy/n7739                                              NET DELAY         0.738        20.050  1       
-\Howdy/countc_266_add_4_17/CI1->\Howdy/countc_266_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        20.328  2       
-\Howdy/n4380                                              NET DELAY         0.738        21.066  1       
-\Howdy/countc_266_add_4_19/CI0->\Howdy/countc_266_add_4_19/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        21.344  2       
-\Howdy/n7742                                              NET DELAY         0.738        22.082  1       
-\Howdy/countc_266_add_4_19/CI1->\Howdy/countc_266_add_4_19/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        22.360  2       
-\Howdy/n4382                                              NET DELAY         0.738        23.098  1       
-\Howdy/countc_266_add_4_21/CI0->\Howdy/countc_266_add_4_21/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        23.376  2       
-\Howdy/n7745                                              NET DELAY         0.738        24.114  1       
-\Howdy/countc_266_add_4_21/CI1->\Howdy/countc_266_add_4_21/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        24.392  2       
-\Howdy/n4384                                              NET DELAY         0.738        25.130  1       
-\Howdy/countc_266_add_4_23/CI0->\Howdy/countc_266_add_4_23/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        25.408  2       
-\Howdy/n7748                                              NET DELAY         0.738        26.146  1       
-\Howdy/countc_266_add_4_23/CI1->\Howdy/countc_266_add_4_23/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        26.424  2       
-\Howdy/n4386                                              NET DELAY         0.738        27.162  1       
-\Howdy/countc_266_add_4_25/CI0->\Howdy/countc_266_add_4_25/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        27.440  2       
-\Howdy/n7751                                              NET DELAY         0.738        28.178  1       
-\Howdy/countc_266_add_4_25/CI1->\Howdy/countc_266_add_4_25/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        28.456  2       
-\Howdy/n4388                                              NET DELAY         0.738        29.194  1       
-\Howdy/countc_266_add_4_27/CI0->\Howdy/countc_266_add_4_27/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        29.472  2       
-\Howdy/n7754                                              NET DELAY         0.738        30.210  1       
-\Howdy/countc_266_add_4_27/CI1->\Howdy/countc_266_add_4_27/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        30.488  2       
-\Howdy/n4390                                              NET DELAY         0.738        31.226  1       
-\Howdy/countc_266_add_4_29/CI0->\Howdy/countc_266_add_4_29/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        31.504  2       
-\Howdy/n7757                                              NET DELAY         0.738        32.242  1       
-\Howdy/countc_266_add_4_29/CI1->\Howdy/countc_266_add_4_29/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        32.520  2       
-\Howdy/n4392                                              NET DELAY         0.738        33.258  1       
-\Howdy/countc_266_add_4_31/CI0->\Howdy/countc_266_add_4_31/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        33.536  2       
-\Howdy/n7760                                              NET DELAY         0.738        34.274  1       
-\Howdy/countc_266_add_4_31/D1->\Howdy/countc_266_add_4_31/S1
-                                          FA2             D1_TO_S1_DELAY    0.477        34.751  1       
-\Howdy/n135                                               NET DELAY         0.500        35.251  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-<A name="Timing_rpt_SetupDetailedConstraint_5"></A><A href=#Timing_rpt_SetupSummaryConstraint_5>4.1.5  Setup path details for constraint: set_false_path -from [get_clocks clk0] -to [get_clocks clk1]</A>
+<A name="Timing_rpt_SetupDetailedConstraint_3"></A><A href=#Timing_rpt_SetupSummaryConstraint_3>4.1.3  Setup path details for constraint: set_false_path -from [get_clocks clk0] -to [get_clocks clk1]</A>
 ----------------------------------------------------------------------
 8 endpoints scored, 0 timing errors detected.
 
@@ -1106,30 +548,31 @@ Path End         : \NES/button_i6/D
 Source Clock     : clk0
 Destination Clock: clk1
 Logic Level      : 7
-Delay Ratio      : 50.8% (route), 49.2% (logic)
-Clock Skew       : -0.477 ns
+Delay Ratio      : 53.2% (route), 46.8% (logic)
+Clock Skew       : -0.563 ns
 
  
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/NEScount_i9/CK->\NES/NEScount_i9/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  1       
-\NES/NEScount[9]                                          NET DELAY      0.500         3.307  1       
-\NES/i4_4_lut/A->\NES/i4_4_lut/Z          LUT4            A_TO_Z_DELAY   0.477         3.784  1       
-\NES/n10                                                  NET DELAY      0.500         4.284  1       
-\NES/i5_3_lut/B->\NES/i5_3_lut/Z          LUT4            B_TO_Z_DELAY   0.477         4.761  7       
-\NES/n43                                                  NET DELAY      0.889         5.650  1       
-\NES/i4_4_lut_adj_62/B->\NES/i4_4_lut_adj_62/Z
-                                          LUT4            B_TO_Z_DELAY   0.477         6.127  3       
-n19                                                       NET DELAY      0.719         6.846  1       
-\NES/i2_3_lut_4_lut_adj_61/D->\NES/i2_3_lut_4_lut_adj_61/Z
-                                          LUT4            D_TO_Z_DELAY   0.477         7.323  2       
-n4067                                                     NET DELAY      0.638         7.961  1       
-\NES/i1_2_lut_adj_59/A->\NES/i1_2_lut_adj_59/Z
-                                          LUT4            A_TO_Z_DELAY   0.477         8.438  2       
-n5421                                                     NET DELAY      0.638         9.076  1       
-i2124_4_lut/D->i2124_4_lut/Z              LUT4            D_TO_Z_DELAY   0.477         9.553  1       
-n2908                                                     NET DELAY      0.500        10.053  1       
+\NES/NEScount_i9/CK->\NES/NEScount_i9/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  2       
+\NES/NEScount[9]                                          NET DELAY      0.738         3.631  1       
+\NES/i2_2_lut_3_lut/B->\NES/i2_2_lut_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         4.108  2       
+\NES/n20                                                  NET DELAY      0.638         4.746  1       
+\NES/i4_2_lut_3_lut/C->\NES/i4_2_lut_3_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         5.223  4       
+\NES/n18                                                  NET DELAY      0.777         6.000  1       
+\NES/i1_2_lut_3_lut_4_lut/A->\NES/i1_2_lut_3_lut_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY   0.477         6.477  5       
+n1208                                                     NET DELAY      0.821         7.298  1       
+\NES/i2_3_lut/B->\NES/i2_3_lut/Z          LUT4            B_TO_Z_DELAY   0.477         7.775  3       
+n19                                                       NET DELAY      0.719         8.494  1       
+\NES/i2_3_lut_4_lut/C->\NES/i2_3_lut_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         8.971  2       
+n1204                                                     NET DELAY      0.638         9.609  1       
+i935_4_lut/D->i935_4_lut/Z                LUT4            D_TO_Z_DELAY   0.477        10.086  1       
+n1264                                                     NET DELAY      0.500        10.586  1       
 
 
 
@@ -1140,61 +583,608 @@ Path End         : \NES/button_i5/D
 Source Clock     : clk0
 Destination Clock: clk1
 Logic Level      : 7
-Delay Ratio      : 50.8% (route), 49.2% (logic)
-Clock Skew       : -0.477 ns
+Delay Ratio      : 53.2% (route), 46.8% (logic)
+Clock Skew       : -0.563 ns
 
  
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/NEScount_i9/CK->\NES/NEScount_i9/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  1       
-\NES/NEScount[9]                                          NET DELAY      0.500         3.307  1       
-\NES/i4_4_lut/A->\NES/i4_4_lut/Z          LUT4            A_TO_Z_DELAY   0.477         3.784  1       
-\NES/n10                                                  NET DELAY      0.500         4.284  1       
-\NES/i5_3_lut/B->\NES/i5_3_lut/Z          LUT4            B_TO_Z_DELAY   0.477         4.761  7       
-\NES/n43                                                  NET DELAY      0.889         5.650  1       
-\NES/i4_4_lut_adj_62/B->\NES/i4_4_lut_adj_62/Z
-                                          LUT4            B_TO_Z_DELAY   0.477         6.127  3       
-n19                                                       NET DELAY      0.719         6.846  1       
-\NES/i2_3_lut_4_lut_adj_61/D->\NES/i2_3_lut_4_lut_adj_61/Z
-                                          LUT4            D_TO_Z_DELAY   0.477         7.323  2       
-n4067                                                     NET DELAY      0.638         7.961  1       
-\NES/i1_2_lut_adj_59/A->\NES/i1_2_lut_adj_59/Z
-                                          LUT4            A_TO_Z_DELAY   0.477         8.438  2       
-n5421                                                     NET DELAY      0.638         9.076  1       
-i2123_4_lut/D->i2123_4_lut/Z              LUT4            D_TO_Z_DELAY   0.477         9.553  1       
-n2907                                                     NET DELAY      0.500        10.053  1       
+\NES/NEScount_i9/CK->\NES/NEScount_i9/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  2       
+\NES/NEScount[9]                                          NET DELAY      0.738         3.631  1       
+\NES/i2_2_lut_3_lut/B->\NES/i2_2_lut_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         4.108  2       
+\NES/n20                                                  NET DELAY      0.638         4.746  1       
+\NES/i4_2_lut_3_lut/C->\NES/i4_2_lut_3_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         5.223  4       
+\NES/n18                                                  NET DELAY      0.777         6.000  1       
+\NES/i1_2_lut_3_lut_4_lut/A->\NES/i1_2_lut_3_lut_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY   0.477         6.477  5       
+n1208                                                     NET DELAY      0.821         7.298  1       
+\NES/i2_3_lut/B->\NES/i2_3_lut/Z          LUT4            B_TO_Z_DELAY   0.477         7.775  3       
+n19                                                       NET DELAY      0.719         8.494  1       
+\NES/i2_3_lut_4_lut/C->\NES/i2_3_lut_4_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         8.971  2       
+n1204                                                     NET DELAY      0.638         9.609  1       
+i934_4_lut/D->i934_4_lut/Z                LUT4            D_TO_Z_DELAY   0.477        10.086  1       
+n1263                                                     NET DELAY      0.500        10.586  1       
 
 
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \NES/NEScount_i9/Q
+Path Begin       : \NES/NEScount_i8/Q
 Path End         : \NES/button_i3/D
 Source Clock     : clk0
 Destination Clock: clk1
-Logic Level      : 6
-Delay Ratio      : 49.8% (route), 50.2% (logic)
-Clock Skew       : -0.477 ns
+Logic Level      : 7
+Delay Ratio      : 52.0% (route), 48.0% (logic)
+Clock Skew       : -0.563 ns
 
  
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/NEScount_i9/CK->\NES/NEScount_i9/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  1       
-\NES/NEScount[9]                                          NET DELAY      0.500         3.307  1       
-\NES/i4_4_lut/A->\NES/i4_4_lut/Z          LUT4            A_TO_Z_DELAY   0.477         3.784  1       
-\NES/n10                                                  NET DELAY      0.500         4.284  1       
-\NES/i5_3_lut/B->\NES/i5_3_lut/Z          LUT4            B_TO_Z_DELAY   0.477         4.761  7       
-\NES/n43                                                  NET DELAY      0.889         5.650  1       
-\NES/i4_4_lut_adj_62/B->\NES/i4_4_lut_adj_62/Z
-                                          LUT4            B_TO_Z_DELAY   0.477         6.127  3       
-n19                                                       NET DELAY      0.719         6.846  1       
-\NES/i2_3_lut_4_lut_adj_61/D->\NES/i2_3_lut_4_lut_adj_61/Z
-                                          LUT4            D_TO_Z_DELAY   0.477         7.323  2       
-n4067                                                     NET DELAY      0.638         7.961  1       
-i2122_4_lut/C->i2122_4_lut/Z              LUT4            C_TO_Z_DELAY   0.477         8.438  1       
-n2906                                                     NET DELAY      0.500         8.938  1       
+\NES/NEScount_i8/CK->\NES/NEScount_i8/Q   FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  2       
+\NES/NEScount[8]                                          NET DELAY      0.738         3.631  1       
+\NES/i2_2_lut_3_lut/C->\NES/i2_2_lut_3_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         4.108  2       
+\NES/n20                                                  NET DELAY      0.638         4.746  1       
+\NES/i4_2_lut_3_lut/C->\NES/i4_2_lut_3_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         5.223  4       
+\NES/n18                                                  NET DELAY      0.777         6.000  1       
+\NES/i1_2_lut_3_lut_4_lut/A->\NES/i1_2_lut_3_lut_4_lut/Z
+                                          LUT4            A_TO_Z_DELAY   0.477         6.477  5       
+n1208                                                     NET DELAY      0.821         7.298  1       
+\NES/i1_2_lut_3_lut/C->\NES/i1_2_lut_3_lut/Z
+                                          LUT4            C_TO_Z_DELAY   0.477         7.775  2       
+n21                                                       NET DELAY      0.638         8.413  1       
+\NES/i1_4_lut_adj_60/D->\NES/i1_4_lut_adj_60/Z
+                                          LUT4            D_TO_Z_DELAY   0.477         8.890  1       
+n4                                                        NET DELAY      0.500         9.390  1       
+i933_4_lut/D->i933_4_lut/Z                LUT4            D_TO_Z_DELAY   0.477         9.867  1       
+n1262                                                     NET DELAY      0.500        10.367  1       
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<A name="Timing_rpt_SetupDetailedConstraint_4"></A><A href=#Timing_rpt_SetupSummaryConstraint_4>4.1.4  Setup path details for constraint: set_false_path -from [get_clocks clk1] -to [get_clocks clk0]</A>
+----------------------------------------------------------------------
+4 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/button_i1/Q
+Path End         : \GAMER/posxout_i1/SR
+Source Clock     : clk1
+Destination Clock: clk0
+Logic Level      : 4
+Delay Ratio      : 48.1% (route), 51.9% (logic)
+Clock Skew       : 0.563 ns
+
+ 
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/button_i1/CK->\NES/button_i1/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[1]                                             NET DELAY      0.738         3.068  1       
+\GAMER/i4_4_lut/D->\GAMER/i4_4_lut/Z      LUT4            D_TO_Z_DELAY   0.477         3.545  1       
+\GAMER/n10                                                NET DELAY      0.500         4.045  1       
+\GAMER/i5_3_lut/B->\GAMER/i5_3_lut/Z      LUT4            B_TO_Z_DELAY   0.477         4.522  3       
+\GAMER/n1221                                              NET DELAY      0.719         5.241  1       
+\GAMER/i473_1_lut_3_lut/B->\GAMER/i473_1_lut_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.450         5.691  2       
+\GAMER/posxout_31__N_235[1]                               NET DELAY      0.638         6.329  1       
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/button_i1/Q
+Path End         : \GAMER/posxout_i2/D
+Source Clock     : clk1
+Destination Clock: clk0
+Logic Level      : 4
+Delay Ratio      : 47.9% (route), 52.1% (logic)
+Clock Skew       : 0.563 ns
+
+ 
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/button_i1/CK->\NES/button_i1/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[1]                                             NET DELAY      0.738         3.068  1       
+\GAMER/i4_4_lut/D->\GAMER/i4_4_lut/Z      LUT4            D_TO_Z_DELAY   0.477         3.545  1       
+\GAMER/n10                                                NET DELAY      0.500         4.045  1       
+\GAMER/i5_3_lut/B->\GAMER/i5_3_lut/Z      LUT4            B_TO_Z_DELAY   0.477         4.522  3       
+\GAMER/n1221                                              NET DELAY      0.719         5.241  1       
+\GAMER/i473_1_lut_3_lut/B->\GAMER/i473_1_lut_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         5.718  2       
+\GAMER/posxout_31__N_235[1]                               NET DELAY      0.638         6.356  1       
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/button_i1/Q
+Path End         : \GAMER/posxout_i1/D
+Source Clock     : clk1
+Destination Clock: clk0
+Logic Level      : 4
+Delay Ratio      : 46.5% (route), 53.5% (logic)
+Clock Skew       : 0.563 ns
+
+ 
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/button_i1/CK->\NES/button_i1/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[1]                                             NET DELAY      0.738         3.068  1       
+\GAMER/i4_4_lut/D->\GAMER/i4_4_lut/Z      LUT4            D_TO_Z_DELAY   0.477         3.545  1       
+\GAMER/n10                                                NET DELAY      0.500         4.045  1       
+\GAMER/i5_3_lut/B->\GAMER/i5_3_lut/Z      LUT4            B_TO_Z_DELAY   0.477         4.522  3       
+\GAMER/n1221                                              NET DELAY      0.719         5.241  1       
+\GAMER/i2387_3_lut/B->\GAMER/i2387_3_lut/Z
+                                          LUT4            B_TO_Z_DELAY   0.477         5.718  1       
+\GAMER/posxout_31__N_267[0]                               NET DELAY      0.500         6.218  1       
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<A name="Timing_rpt_SetupDetailedConstraint_5"></A><A href=#Timing_rpt_SetupSummaryConstraint_5>4.1.5  Setup path details for constraint: create_clock -name {clk0} -period 1000 [get_nets pll_clock]</A>
+----------------------------------------------------------------------
+217 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \Howdy/countc_125__i1/Q
+Path End         : \Howdy/countc_125__i32/D
+Source Clock     : clk0
+Destination Clock: clk0
+Logic Level      : 33
+Delay Ratio      : 69.8% (route), 30.2% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 1000.000 ns 
+Path Slack       : 964.882 ns  (Passed)
+
+  Destination Clock Arrival Time (clk0:R#2)   1000.000
++ Destination Clock Source Latency               0.000
+- Destination Clock Uncertainty                  0.000
++ Destination Clock Path Delay                   1.502
+- Setup Time                                     0.199
+-------------------------------------------   --------
+End-of-path required time( ns )               1001.303
+
+  Source Clock Arrival Time (clk0:R#1)    0.000
++ Source Clock Source Latency             0.000
++ Source Clock Path Delay                 1.502
++ Data Path Delay                        34.919
+--------------------------------------   ------
+End-of-path arrival time( ns )           36.421
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\Howdy/countc_125__i1/CK->\Howdy/countc_125__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.893  7       
+colp[0]                                                   NET DELAY         0.989         3.882  1       
+\Howdy/countc_125_add_4_1/C1->\Howdy/countc_125_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         4.226  2       
+\Howdy/n2026                                              NET DELAY         0.738         4.964  1       
+\Howdy/countc_125_add_4_3/CI0->\Howdy/countc_125_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         5.242  2       
+\Howdy/n3431                                              NET DELAY         0.738         5.980  1       
+\Howdy/countc_125_add_4_3/CI1->\Howdy/countc_125_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         6.258  2       
+\Howdy/n2028                                              NET DELAY         0.738         6.996  1       
+\Howdy/countc_125_add_4_5/CI0->\Howdy/countc_125_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         7.274  2       
+\Howdy/n3434                                              NET DELAY         0.738         8.012  1       
+\Howdy/countc_125_add_4_5/CI1->\Howdy/countc_125_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         8.290  2       
+\Howdy/n2030                                              NET DELAY         0.738         9.028  1       
+\Howdy/countc_125_add_4_7/CI0->\Howdy/countc_125_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         9.306  2       
+\Howdy/n3437                                              NET DELAY         0.738        10.044  1       
+\Howdy/countc_125_add_4_7/CI1->\Howdy/countc_125_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        10.322  2       
+\Howdy/n2032                                              NET DELAY         0.738        11.060  1       
+\Howdy/countc_125_add_4_9/CI0->\Howdy/countc_125_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.338  2       
+\Howdy/n3440                                              NET DELAY         0.738        12.076  1       
+\Howdy/countc_125_add_4_9/CI1->\Howdy/countc_125_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.354  2       
+\Howdy/n2034                                              NET DELAY         0.738        13.092  1       
+\Howdy/countc_125_add_4_11/CI0->\Howdy/countc_125_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.370  2       
+\Howdy/n3443                                              NET DELAY         0.738        14.108  1       
+\Howdy/countc_125_add_4_11/CI1->\Howdy/countc_125_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.386  2       
+\Howdy/n2036                                              NET DELAY         0.738        15.124  1       
+\Howdy/countc_125_add_4_13/CI0->\Howdy/countc_125_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.402  2       
+\Howdy/n3446                                              NET DELAY         0.738        16.140  1       
+\Howdy/countc_125_add_4_13/CI1->\Howdy/countc_125_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.418  2       
+\Howdy/n2038                                              NET DELAY         0.738        17.156  1       
+\Howdy/countc_125_add_4_15/CI0->\Howdy/countc_125_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        17.434  2       
+\Howdy/n3449                                              NET DELAY         0.738        18.172  1       
+\Howdy/countc_125_add_4_15/CI1->\Howdy/countc_125_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        18.450  2       
+\Howdy/n2040                                              NET DELAY         0.738        19.188  1       
+\Howdy/countc_125_add_4_17/CI0->\Howdy/countc_125_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        19.466  2       
+\Howdy/n3452                                              NET DELAY         0.738        20.204  1       
+\Howdy/countc_125_add_4_17/CI1->\Howdy/countc_125_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        20.482  2       
+\Howdy/n2042                                              NET DELAY         0.738        21.220  1       
+\Howdy/countc_125_add_4_19/CI0->\Howdy/countc_125_add_4_19/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        21.498  2       
+\Howdy/n3455                                              NET DELAY         0.738        22.236  1       
+\Howdy/countc_125_add_4_19/CI1->\Howdy/countc_125_add_4_19/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        22.514  2       
+\Howdy/n2044                                              NET DELAY         0.738        23.252  1       
+\Howdy/countc_125_add_4_21/CI0->\Howdy/countc_125_add_4_21/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        23.530  2       
+\Howdy/n3458                                              NET DELAY         0.738        24.268  1       
+\Howdy/countc_125_add_4_21/CI1->\Howdy/countc_125_add_4_21/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        24.546  2       
+\Howdy/n2046                                              NET DELAY         0.738        25.284  1       
+\Howdy/countc_125_add_4_23/CI0->\Howdy/countc_125_add_4_23/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        25.562  2       
+\Howdy/n3461                                              NET DELAY         0.738        26.300  1       
+\Howdy/countc_125_add_4_23/CI1->\Howdy/countc_125_add_4_23/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        26.578  2       
+\Howdy/n2048                                              NET DELAY         0.738        27.316  1       
+\Howdy/countc_125_add_4_25/CI0->\Howdy/countc_125_add_4_25/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        27.594  2       
+\Howdy/n3464                                              NET DELAY         0.738        28.332  1       
+\Howdy/countc_125_add_4_25/CI1->\Howdy/countc_125_add_4_25/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        28.610  2       
+\Howdy/n2050                                              NET DELAY         0.738        29.348  1       
+\Howdy/countc_125_add_4_27/CI0->\Howdy/countc_125_add_4_27/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        29.626  2       
+\Howdy/n3467                                              NET DELAY         0.738        30.364  1       
+\Howdy/countc_125_add_4_27/CI1->\Howdy/countc_125_add_4_27/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        30.642  2       
+\Howdy/n2052                                              NET DELAY         0.738        31.380  1       
+\Howdy/countc_125_add_4_29/CI0->\Howdy/countc_125_add_4_29/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        31.658  2       
+\Howdy/n3470                                              NET DELAY         0.738        32.396  1       
+\Howdy/countc_125_add_4_29/CI1->\Howdy/countc_125_add_4_29/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        32.674  2       
+\Howdy/n2054                                              NET DELAY         0.738        33.412  1       
+\Howdy/countc_125_add_4_31/CI0->\Howdy/countc_125_add_4_31/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        33.690  2       
+\Howdy/n3473                                              NET DELAY         0.738        34.428  1       
+\Howdy/countc_125_add_4_31/CI1->\Howdy/countc_125_add_4_31/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        34.706  2       
+\Howdy/n2056                                              NET DELAY         0.738        35.444  1       
+\Howdy/countc_125_add_4_33/D0->\Howdy/countc_125_add_4_33/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        35.921  1       
+\Howdy/n134_adj_473                                       NET DELAY         0.500        36.421  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \Howdy/countr__i1/Q
+Path End         : \Howdy/countr__i32/D
+Source Clock     : clk0
+Destination Clock: clk0
+Logic Level      : 33
+Delay Ratio      : 69.5% (route), 30.5% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 1000.000 ns 
+Path Slack       : 965.119 ns  (Passed)
+
+  Destination Clock Arrival Time (clk0:R#2)   1000.000
++ Destination Clock Source Latency               0.000
+- Destination Clock Uncertainty                  0.000
++ Destination Clock Path Delay                   1.502
+- Setup Time                                     0.199
+-------------------------------------------   --------
+End-of-path required time( ns )               1001.303
+
+  Source Clock Arrival Time (clk0:R#1)    0.000
++ Source Clock Source Latency             0.000
++ Source Clock Path Delay                 1.502
++ Data Path Delay                        34.682
+--------------------------------------   ------
+End-of-path arrival time( ns )           36.184
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\Howdy/countr__i1/CK->\Howdy/countr__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.893  2       
+\Howdy/rowp[0]                                            NET DELAY         0.738         3.631  1       
+\Howdy/add_11_add_4_1/B1->\Howdy/add_11_add_4_1/CO1
+                                          FA2             B1_TO_CO1_DELAY   0.358         3.989  2       
+\Howdy/n2059                                              NET DELAY         0.738         4.727  1       
+\Howdy/add_11_add_4_3/CI0->\Howdy/add_11_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         5.005  2       
+\Howdy/n3371                                              NET DELAY         0.738         5.743  1       
+\Howdy/add_11_add_4_3/CI1->\Howdy/add_11_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         6.021  2       
+\Howdy/n2061                                              NET DELAY         0.738         6.759  1       
+\Howdy/add_11_add_4_5/CI0->\Howdy/add_11_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         7.037  2       
+\Howdy/n3374                                              NET DELAY         0.738         7.775  1       
+\Howdy/add_11_add_4_5/CI1->\Howdy/add_11_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         8.053  2       
+\Howdy/n2063                                              NET DELAY         0.738         8.791  1       
+\Howdy/add_11_add_4_7/CI0->\Howdy/add_11_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         9.069  2       
+\Howdy/n3377                                              NET DELAY         0.738         9.807  1       
+\Howdy/add_11_add_4_7/CI1->\Howdy/add_11_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        10.085  2       
+\Howdy/n2065                                              NET DELAY         0.738        10.823  1       
+\Howdy/add_11_add_4_9/CI0->\Howdy/add_11_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.101  2       
+\Howdy/n3380                                              NET DELAY         0.738        11.839  1       
+\Howdy/add_11_add_4_9/CI1->\Howdy/add_11_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.117  2       
+\Howdy/n2067                                              NET DELAY         0.738        12.855  1       
+\Howdy/add_11_add_4_11/CI0->\Howdy/add_11_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.133  2       
+\Howdy/n3383                                              NET DELAY         0.738        13.871  1       
+\Howdy/add_11_add_4_11/CI1->\Howdy/add_11_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.149  2       
+\Howdy/n2069                                              NET DELAY         0.738        14.887  1       
+\Howdy/add_11_add_4_13/CI0->\Howdy/add_11_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.165  2       
+\Howdy/n3386                                              NET DELAY         0.738        15.903  1       
+\Howdy/add_11_add_4_13/CI1->\Howdy/add_11_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.181  2       
+\Howdy/n2071                                              NET DELAY         0.738        16.919  1       
+\Howdy/add_11_add_4_15/CI0->\Howdy/add_11_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        17.197  2       
+\Howdy/n3389                                              NET DELAY         0.738        17.935  1       
+\Howdy/add_11_add_4_15/CI1->\Howdy/add_11_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        18.213  2       
+\Howdy/n2073                                              NET DELAY         0.738        18.951  1       
+\Howdy/add_11_add_4_17/CI0->\Howdy/add_11_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        19.229  2       
+\Howdy/n3392                                              NET DELAY         0.738        19.967  1       
+\Howdy/add_11_add_4_17/CI1->\Howdy/add_11_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        20.245  2       
+\Howdy/n2075                                              NET DELAY         0.738        20.983  1       
+\Howdy/add_11_add_4_19/CI0->\Howdy/add_11_add_4_19/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        21.261  2       
+\Howdy/n3479                                              NET DELAY         0.738        21.999  1       
+\Howdy/add_11_add_4_19/CI1->\Howdy/add_11_add_4_19/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        22.277  2       
+\Howdy/n2077                                              NET DELAY         0.738        23.015  1       
+\Howdy/add_11_add_4_21/CI0->\Howdy/add_11_add_4_21/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        23.293  2       
+\Howdy/n3482                                              NET DELAY         0.738        24.031  1       
+\Howdy/add_11_add_4_21/CI1->\Howdy/add_11_add_4_21/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        24.309  2       
+\Howdy/n2079                                              NET DELAY         0.738        25.047  1       
+\Howdy/add_11_add_4_23/CI0->\Howdy/add_11_add_4_23/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        25.325  2       
+\Howdy/n3485                                              NET DELAY         0.738        26.063  1       
+\Howdy/add_11_add_4_23/CI1->\Howdy/add_11_add_4_23/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        26.341  2       
+\Howdy/n2081                                              NET DELAY         0.738        27.079  1       
+\Howdy/add_11_add_4_25/CI0->\Howdy/add_11_add_4_25/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        27.357  2       
+\Howdy/n3488                                              NET DELAY         0.738        28.095  1       
+\Howdy/add_11_add_4_25/CI1->\Howdy/add_11_add_4_25/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        28.373  2       
+\Howdy/n2083                                              NET DELAY         0.738        29.111  1       
+\Howdy/add_11_add_4_27/CI0->\Howdy/add_11_add_4_27/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        29.389  2       
+\Howdy/n3491                                              NET DELAY         0.738        30.127  1       
+\Howdy/add_11_add_4_27/CI1->\Howdy/add_11_add_4_27/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        30.405  2       
+\Howdy/n2085                                              NET DELAY         0.738        31.143  1       
+\Howdy/add_11_add_4_29/CI0->\Howdy/add_11_add_4_29/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        31.421  2       
+\Howdy/n3494                                              NET DELAY         0.738        32.159  1       
+\Howdy/add_11_add_4_29/CI1->\Howdy/add_11_add_4_29/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        32.437  2       
+\Howdy/n2087                                              NET DELAY         0.738        33.175  1       
+\Howdy/add_11_add_4_31/CI0->\Howdy/add_11_add_4_31/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        33.453  2       
+\Howdy/n3497                                              NET DELAY         0.738        34.191  1       
+\Howdy/add_11_add_4_31/CI1->\Howdy/add_11_add_4_31/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        34.469  2       
+\Howdy/n2089                                              NET DELAY         0.738        35.207  1       
+\Howdy/add_11_add_4_33/D0->\Howdy/add_11_add_4_33/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        35.684  1       
+\Howdy/n68                                                NET DELAY         0.500        36.184  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \Howdy/countc_125__i1/Q
+Path End         : \Howdy/countc_125__i31/D
+Source Clock     : clk0
+Destination Clock: clk0
+Logic Level      : 32
+Delay Ratio      : 69.7% (route), 30.3% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 1000.000 ns 
+Path Slack       : 965.898 ns  (Passed)
+
+  Destination Clock Arrival Time (clk0:R#2)   1000.000
++ Destination Clock Source Latency               0.000
+- Destination Clock Uncertainty                  0.000
++ Destination Clock Path Delay                   1.502
+- Setup Time                                     0.199
+-------------------------------------------   --------
+End-of-path required time( ns )               1001.303
+
+  Source Clock Arrival Time (clk0:R#1)    0.000
++ Source Clock Source Latency             0.000
++ Source Clock Path Delay                 1.502
++ Data Path Delay                        33.903
+--------------------------------------   ------
+End-of-path arrival time( ns )           35.405
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\Howdy/countc_125__i1/CK->\Howdy/countc_125__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.893  7       
+colp[0]                                                   NET DELAY         0.989         3.882  1       
+\Howdy/countc_125_add_4_1/C1->\Howdy/countc_125_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         4.226  2       
+\Howdy/n2026                                              NET DELAY         0.738         4.964  1       
+\Howdy/countc_125_add_4_3/CI0->\Howdy/countc_125_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         5.242  2       
+\Howdy/n3431                                              NET DELAY         0.738         5.980  1       
+\Howdy/countc_125_add_4_3/CI1->\Howdy/countc_125_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         6.258  2       
+\Howdy/n2028                                              NET DELAY         0.738         6.996  1       
+\Howdy/countc_125_add_4_5/CI0->\Howdy/countc_125_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         7.274  2       
+\Howdy/n3434                                              NET DELAY         0.738         8.012  1       
+\Howdy/countc_125_add_4_5/CI1->\Howdy/countc_125_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         8.290  2       
+\Howdy/n2030                                              NET DELAY         0.738         9.028  1       
+\Howdy/countc_125_add_4_7/CI0->\Howdy/countc_125_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         9.306  2       
+\Howdy/n3437                                              NET DELAY         0.738        10.044  1       
+\Howdy/countc_125_add_4_7/CI1->\Howdy/countc_125_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        10.322  2       
+\Howdy/n2032                                              NET DELAY         0.738        11.060  1       
+\Howdy/countc_125_add_4_9/CI0->\Howdy/countc_125_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.338  2       
+\Howdy/n3440                                              NET DELAY         0.738        12.076  1       
+\Howdy/countc_125_add_4_9/CI1->\Howdy/countc_125_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.354  2       
+\Howdy/n2034                                              NET DELAY         0.738        13.092  1       
+\Howdy/countc_125_add_4_11/CI0->\Howdy/countc_125_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        13.370  2       
+\Howdy/n3443                                              NET DELAY         0.738        14.108  1       
+\Howdy/countc_125_add_4_11/CI1->\Howdy/countc_125_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        14.386  2       
+\Howdy/n2036                                              NET DELAY         0.738        15.124  1       
+\Howdy/countc_125_add_4_13/CI0->\Howdy/countc_125_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        15.402  2       
+\Howdy/n3446                                              NET DELAY         0.738        16.140  1       
+\Howdy/countc_125_add_4_13/CI1->\Howdy/countc_125_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        16.418  2       
+\Howdy/n2038                                              NET DELAY         0.738        17.156  1       
+\Howdy/countc_125_add_4_15/CI0->\Howdy/countc_125_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        17.434  2       
+\Howdy/n3449                                              NET DELAY         0.738        18.172  1       
+\Howdy/countc_125_add_4_15/CI1->\Howdy/countc_125_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        18.450  2       
+\Howdy/n2040                                              NET DELAY         0.738        19.188  1       
+\Howdy/countc_125_add_4_17/CI0->\Howdy/countc_125_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        19.466  2       
+\Howdy/n3452                                              NET DELAY         0.738        20.204  1       
+\Howdy/countc_125_add_4_17/CI1->\Howdy/countc_125_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        20.482  2       
+\Howdy/n2042                                              NET DELAY         0.738        21.220  1       
+\Howdy/countc_125_add_4_19/CI0->\Howdy/countc_125_add_4_19/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        21.498  2       
+\Howdy/n3455                                              NET DELAY         0.738        22.236  1       
+\Howdy/countc_125_add_4_19/CI1->\Howdy/countc_125_add_4_19/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        22.514  2       
+\Howdy/n2044                                              NET DELAY         0.738        23.252  1       
+\Howdy/countc_125_add_4_21/CI0->\Howdy/countc_125_add_4_21/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        23.530  2       
+\Howdy/n3458                                              NET DELAY         0.738        24.268  1       
+\Howdy/countc_125_add_4_21/CI1->\Howdy/countc_125_add_4_21/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        24.546  2       
+\Howdy/n2046                                              NET DELAY         0.738        25.284  1       
+\Howdy/countc_125_add_4_23/CI0->\Howdy/countc_125_add_4_23/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        25.562  2       
+\Howdy/n3461                                              NET DELAY         0.738        26.300  1       
+\Howdy/countc_125_add_4_23/CI1->\Howdy/countc_125_add_4_23/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        26.578  2       
+\Howdy/n2048                                              NET DELAY         0.738        27.316  1       
+\Howdy/countc_125_add_4_25/CI0->\Howdy/countc_125_add_4_25/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        27.594  2       
+\Howdy/n3464                                              NET DELAY         0.738        28.332  1       
+\Howdy/countc_125_add_4_25/CI1->\Howdy/countc_125_add_4_25/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        28.610  2       
+\Howdy/n2050                                              NET DELAY         0.738        29.348  1       
+\Howdy/countc_125_add_4_27/CI0->\Howdy/countc_125_add_4_27/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        29.626  2       
+\Howdy/n3467                                              NET DELAY         0.738        30.364  1       
+\Howdy/countc_125_add_4_27/CI1->\Howdy/countc_125_add_4_27/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        30.642  2       
+\Howdy/n2052                                              NET DELAY         0.738        31.380  1       
+\Howdy/countc_125_add_4_29/CI0->\Howdy/countc_125_add_4_29/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        31.658  2       
+\Howdy/n3470                                              NET DELAY         0.738        32.396  1       
+\Howdy/countc_125_add_4_29/CI1->\Howdy/countc_125_add_4_29/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        32.674  2       
+\Howdy/n2054                                              NET DELAY         0.738        33.412  1       
+\Howdy/countc_125_add_4_31/CI0->\Howdy/countc_125_add_4_31/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        33.690  2       
+\Howdy/n3473                                              NET DELAY         0.738        34.428  1       
+\Howdy/countc_125_add_4_31/D1->\Howdy/countc_125_add_4_31/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        34.905  1       
+\Howdy/n135                                               NET DELAY         0.500        35.405  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
 
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1202,7 +1192,18 @@ n2906                                                     NET DELAY      0.500  
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 <A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
-<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A>
+<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<A name="Timing_rpt_HoldDetailedConstraint_2"></A><A href=#Timing_rpt_HoldSummaryConstraint_2>4.2.2  Hold path details for constraint: create_clock -name {clk1} -period 1000 [get_nets NESclk_c]</A>
 ----------------------------------------------------------------------
 8 endpoints scored, 0 timing errors detected.
 
@@ -1211,112 +1212,6 @@ n2906                                                     NET DELAY      0.500  
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \NES/button_i5/Q
-Path End         : \NES/button_i5/D
-Source Clock     : clk1
-Destination Clock: clk1
-Logic Level      : 2
-Delay Ratio      : 40.2% (route), 59.8% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.079 ns  (Passed)
-
-  Destination Clock Arrival Time (clk1:R#1)     0.000
-+ Destination Clock Source Latency              0.000
-+ Destination Clock Uncertainty                 0.000
-+ Destination Clock Path Delay                  0.939
-+ Hold Time                                    -0.000
--------------------------------------------   -------
-End-of-path required time( ns )                 0.939
-
-  Source Clock Arrival Time (clk1:R#1)   0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                0.939
-+ Data Path Delay                        3.079
---------------------------------------   -----
-End-of-path arrival time( ns )           4.018
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
-NESclk_c                                                  NET DELAY      0.939         0.939  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/button_i5/CK->\NES/button_i5/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
-button_sig[5]                                             NET DELAY      0.738         3.068  1       
-i2123_4_lut/B->i2123_4_lut/Z              LUT4            B_TO_Z_DELAY   0.450         3.518  1       
-n2907                                                     NET DELAY      0.500         4.018  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
-NESclk_c                                                  NET DELAY      0.939         0.939  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \NES/button_i3/Q
-Path End         : \NES/button_i3/D
-Source Clock     : clk1
-Destination Clock: clk1
-Logic Level      : 2
-Delay Ratio      : 40.2% (route), 59.8% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.079 ns  (Passed)
-
-  Destination Clock Arrival Time (clk1:R#1)     0.000
-+ Destination Clock Source Latency              0.000
-+ Destination Clock Uncertainty                 0.000
-+ Destination Clock Path Delay                  0.939
-+ Hold Time                                    -0.000
--------------------------------------------   -------
-End-of-path required time( ns )                 0.939
-
-  Source Clock Arrival Time (clk1:R#1)   0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                0.939
-+ Data Path Delay                        3.079
---------------------------------------   -----
-End-of-path arrival time( ns )           4.018
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
-NESclk_c                                                  NET DELAY      0.939         0.939  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/button_i3/CK->\NES/button_i3/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
-button_sig[3]                                             NET DELAY      0.738         3.068  1       
-i2122_4_lut/B->i2122_4_lut/Z              LUT4            B_TO_Z_DELAY   0.450         3.518  1       
-n2906                                                     NET DELAY      0.500         4.018  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
-NESclk_c                                                  NET DELAY      0.939         0.939  1       
-
-
-
-
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Path Begin       : \NES/button_i1/Q
 Path End         : \NES/button_i1/D
@@ -1347,7 +1242,7 @@ End-of-path arrival time( ns )           4.018
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
@@ -1356,29 +1251,124 @@ Name                                      Cell/Site Name  Delay Name     Delay  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
 \NES/button_i1/CK->\NES/button_i1/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
 button_sig[1]                                             NET DELAY      0.738         3.068  1       
-i2121_4_lut/A->i2121_4_lut/Z              LUT4            A_TO_Z_DELAY   0.450         3.518  1       
-n2905                                                     NET DELAY      0.500         4.018  1       
+i939_4_lut/A->i939_4_lut/Z                LUT4            A_TO_Z_DELAY   0.450         3.518  1       
+n1268                                                     NET DELAY      0.500         4.018  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/i4866_3_lut/Z                        LUT4            CLOCK LATENCY  0.000         0.000  9       
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
 NESclk_c                                                  NET DELAY      0.939         0.939  1       
 
 
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_HoldDetailedConstraint_2"></A><A href=#Timing_rpt_HoldSummaryConstraint_2>4.2.2  Hold path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Path Begin       : \NES/button_i2/Q
+Path End         : \NES/button_i2/D
+Source Clock     : clk1
+Destination Clock: clk1
+Logic Level      : 2
+Delay Ratio      : 40.2% (route), 59.8% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.079 ns  (Passed)
+
+  Destination Clock Arrival Time (clk1:R#1)     0.000
++ Destination Clock Source Latency              0.000
++ Destination Clock Uncertainty                 0.000
++ Destination Clock Path Delay                  0.939
++ Hold Time                                    -0.000
+-------------------------------------------   -------
+End-of-path required time( ns )                 0.939
+
+  Source Clock Arrival Time (clk1:R#1)   0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                0.939
++ Data Path Delay                        3.079
+--------------------------------------   -----
+End-of-path arrival time( ns )           4.018
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
+NESclk_c                                                  NET DELAY      0.939         0.939  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/button_i2/CK->\NES/button_i2/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[2]                                             NET DELAY      0.738         3.068  1       
+i938_4_lut/A->i938_4_lut/Z                LUT4            A_TO_Z_DELAY   0.450         3.518  1       
+n1267                                                     NET DELAY      0.500         4.018  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
+NESclk_c                                                  NET DELAY      0.939         0.939  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/button_i4/Q
+Path End         : \NES/button_i4/D
+Source Clock     : clk1
+Destination Clock: clk1
+Logic Level      : 2
+Delay Ratio      : 40.2% (route), 59.8% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.079 ns  (Passed)
+
+  Destination Clock Arrival Time (clk1:R#1)     0.000
++ Destination Clock Source Latency              0.000
++ Destination Clock Uncertainty                 0.000
++ Destination Clock Path Delay                  0.939
++ Hold Time                                    -0.000
+-------------------------------------------   -------
+End-of-path required time( ns )                 0.939
+
+  Source Clock Arrival Time (clk1:R#1)   0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                0.939
++ Data Path Delay                        3.079
+--------------------------------------   -----
+End-of-path arrival time( ns )           4.018
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
+NESclk_c                                                  NET DELAY      0.939         0.939  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/button_i4/CK->\NES/button_i4/Q       FD1P3XZ         CK_TO_Q_DELAY  1.391         2.330  2       
+button_sig[4]                                             NET DELAY      0.738         3.068  1       
+i937_4_lut/A->i937_4_lut/Z                LUT4            A_TO_Z_DELAY   0.450         3.518  1       
+n1266                                                     NET DELAY      0.500         4.018  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/i3_4_lut/Z                           LUT4            CLOCK LATENCY  0.000         0.000  9       
+NESclk_c                                                  NET DELAY      0.939         0.939  1       
+
+
+
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1393,111 +1383,7 @@ NESclk_c                                                  NET DELAY      0.939  
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \NES/count_265__i17/Q
-Path End         : \NES/NEScount_i7/D
-Source Clock     : clk0
-Destination Clock: clk0
-Logic Level      : 1
-Delay Ratio      : 37.1% (route), 62.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 2.210 ns  (Passed)
-
-  Destination Clock Arrival Time (clk0:R#1)     0.000
-+ Destination Clock Source Latency              0.000
-+ Destination Clock Uncertainty                 0.000
-+ Destination Clock Path Delay                  1.416
-+ Hold Time                                    -0.000
--------------------------------------------   -------
-End-of-path required time( ns )                 1.416
-
-  Source Clock Arrival Time (clk0:R#1)   0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.416
-+ Data Path Delay                        2.210
---------------------------------------   -----
-End-of-path arrival time( ns )           3.626
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/count_265__i17/CK->\NES/count_265__i17/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  3       
-\NES/count[17]                                            NET DELAY      0.819         3.626  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \NES/count_265__i19/Q
-Path End         : \NES/NEScount_i9/D
-Source Clock     : clk0
-Destination Clock: clk0
-Logic Level      : 1
-Delay Ratio      : 37.1% (route), 62.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 2.210 ns  (Passed)
-
-  Destination Clock Arrival Time (clk0:R#1)     0.000
-+ Destination Clock Source Latency              0.000
-+ Destination Clock Uncertainty                 0.000
-+ Destination Clock Path Delay                  1.416
-+ Hold Time                                    -0.000
--------------------------------------------   -------
-End-of-path required time( ns )                 1.416
-
-  Source Clock Arrival Time (clk0:R#1)   0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.416
-+ Data Path Delay                        2.210
---------------------------------------   -----
-End-of-path arrival time( ns )           3.626
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/count_265__i19/CK->\NES/count_265__i19/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  3       
-\NES/count[19]                                            NET DELAY      0.819         3.626  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
-
-
-
-
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \NES/count_265__i18/Q
+Path Begin       : \NES/count_124__i18/Q
 Path End         : \NES/NEScount_i8/D
 Source Clock     : clk0
 Destination Clock: clk0
@@ -1510,39 +1396,143 @@ Path Slack       : 2.210 ns  (Passed)
   Destination Clock Arrival Time (clk0:R#1)     0.000
 + Destination Clock Source Latency              0.000
 + Destination Clock Uncertainty                 0.000
-+ Destination Clock Path Delay                  1.416
++ Destination Clock Path Delay                  1.502
 + Hold Time                                    -0.000
 -------------------------------------------   -------
-End-of-path required time( ns )                 1.416
+End-of-path required time( ns )                 1.502
 
   Source Clock Arrival Time (clk0:R#1)   0.000
 + Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.416
++ Source Clock Path Delay                1.502
 + Data Path Delay                        2.210
 --------------------------------------   -----
-End-of-path arrival time( ns )           3.626
+End-of-path arrival time( ns )           3.712
 
  
 Source Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\NES/count_265__i18/CK->\NES/count_265__i18/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.807  3       
-\NES/count[18]                                            NET DELAY      0.819         3.626  1       
+\NES/count_124__i18/CK->\NES/count_124__i18/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  3       
+\NES/count[18]                                            NET DELAY      0.819         3.712  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  -------------  -----  ------------  ------  
-\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  98      
-pll_clock                                                 NET DELAY      1.416         1.416  1       
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/count_124__i17/Q
+Path End         : \NES/NEScount_i7/D
+Source Clock     : clk0
+Destination Clock: clk0
+Logic Level      : 1
+Delay Ratio      : 37.1% (route), 62.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.210 ns  (Passed)
+
+  Destination Clock Arrival Time (clk0:R#1)     0.000
++ Destination Clock Source Latency              0.000
++ Destination Clock Uncertainty                 0.000
++ Destination Clock Path Delay                  1.502
++ Hold Time                                    -0.000
+-------------------------------------------   -------
+End-of-path required time( ns )                 1.502
+
+  Source Clock Arrival Time (clk0:R#1)   0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                1.502
++ Data Path Delay                        2.210
+--------------------------------------   -----
+End-of-path arrival time( ns )           3.712
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/count_124__i17/CK->\NES/count_124__i17/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  3       
+\NES/count[17]                                            NET DELAY      0.819         3.712  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \NES/count_124__i19/Q
+Path End         : \NES/NEScount_i9/D
+Source Clock     : clk0
+Destination Clock: clk0
+Logic Level      : 1
+Delay Ratio      : 37.1% (route), 62.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.210 ns  (Passed)
+
+  Destination Clock Arrival Time (clk0:R#1)     0.000
++ Destination Clock Source Latency              0.000
++ Destination Clock Uncertainty                 0.000
++ Destination Clock Path Delay                  1.502
++ Hold Time                                    -0.000
+-------------------------------------------   -------
+End-of-path required time( ns )                 1.502
+
+  Source Clock Arrival Time (clk0:R#1)   0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                1.502
++ Data Path Delay                        2.210
+--------------------------------------   -----
+End-of-path arrival time( ns )           3.712
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\NES/count_124__i19/CK->\NES/count_124__i19/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY  1.391         2.893  3       
+\NES/count[19]                                            NET DELAY      0.819         3.712  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+\Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL    PLL_B           CLOCK LATENCY  0.000         0.000  101     
+pll_clock                                                 NET DELAY      1.502         1.502  1       
 
 
 

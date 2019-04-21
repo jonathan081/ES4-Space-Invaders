@@ -68,8 +68,8 @@ component game is
 		pos_yin: in integer;
 		button: in std_logic_vector(7 downto 0);
 		clk: in std_logic;
-		pos_x: out integer;
-		pos_y: out integer
+		posxout: out integer;
+		posyout: out integer
 	);
 end component;
 
@@ -79,8 +79,10 @@ signal rowp : unsigned(9 downto 0);
 signal colp : unsigned(9 downto 0);
 signal validp : std_logic; 
 signal button_sig: std_logic_vector(7 downto 0);
-signal ship_x : integer := 300;
-signal ship_y : integer := 300;
+signal ship_x_start : integer := 300;
+signal ship_y_start : integer := 300;
+signal ship_x : integer;
+signal ship_y : integer;
 
 begin
 
@@ -90,7 +92,7 @@ NES: controller port map(button_sig, latch, NESclk, control, pll_clock);
 
 
 Howdy : vga port map(pll_clock, HSYNC, VSYNC, rowp, colp, validp);
-GAMER: game port map(ship_x, ship_y, button_sig, pll_clock, ship_x, ship_y);
+GAMER: game port map(ship_x_start, ship_y_start, button_sig, pll_clock, ship_x, ship_y);
 Hola : pattern_gen port map(rowp, colp, validp, button_sig, rgbT, ship_x, ship_y);
 
 end;

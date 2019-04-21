@@ -1,107 +1,444 @@
 
-"C:/lscc/radiant/1.0/tcltk/bin/tclsh" "FinalProject_impl_1_synthesize.tcl"
-
-synthesis -f FinalProject_impl_1_lattice.synproj
-synthesis:  version Radiant (64-bit) 1.0.0.350.6
+map "FinalProject_impl_1_syn.udb" "C:/Users/Jonathan/my_designs/FinalProject/FinalProject.pdc" -o "FinalProject_impl_1.udb"     
+map:  version Radiant (64-bit) 1.0.0.350.6
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 21 18:18:11 2019
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+   Picdevice="iCE40UP5K"
+
+   Pictype="SG48"
+
+   Picspeed=High-Performance_1.2V
+
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
+Part used: iCE40UP5KSG48, Performance used: High-Performance_1.2V.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
 
 
-Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/Jonathan/my_designs/FinalProject/promote.xml 
-
-INFO - synthesis: Lattice Synthesis Engine Launched.
-Synthesis options:
-The -a option is iCE40UP.
-The -t option is SG48.
-The -sp option is High-Performance_1.2V.
-The -p option is iCE40UP5K.
-                                                          
 
 
-##########################################################
+Design Summary:
+   Number of slice registers: 109 out of  5280 (2%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           201 out of  5280 (4%)
+      Number of logic LUT4s:              99
+      Number of inserted feedthru LUT4s:  11
+      Number of replicated LUT4s:          1
+      Number of ripple logic:             45 (90 LUT4s)
+   Number of IO sites used:   11 out of 39 (28%)
+      Number of IO sites used for general PIOs: 11
+      Number of IO sites used for I3Cs: 0 out of 2 (0%)
+      Number of IO sites used for PIOs+I3Cs: 11 out of 36 (31%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  3
+      Net pll_clock: 62 loads, 62 rising, 0 falling (Driver: Pin Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net NESclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin NES.i3_4_lut/OUT)
+      Net clk: 1 loads, 1 rising, 0 falling (Driver: Pin Hi/CLKHF)
+   Number of Clock Enables:  2
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
+   Number of LSRs:  7
+      Net GAMER/posxout_31__N_235[1]: 1 loads, 1 SLICEs
+      Net NES/n1260: 11 loads, 11 SLICEs
+      Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
+      Net Howdy/row_9__N_187: 17 loads, 17 SLICEs
+      Net Howdy/n991: 1 loads, 1 SLICEs
+      Net Howdy/n970: 1 loads, 1 SLICEs
+      Net Howdy/n25: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net Howdy/row_9__N_189: 34 loads
+      Net Howdy/row_9__N_187: 17 loads
+      Net NES/n1260: 11 loads
+      Net NES/NEScount[0]: 9 loads
+      Net control_c: 8 loads
+      Net NES/NEScount[1]: 8 loads
+      Net colp[0]: 7 loads
+      Net colp[4]: 7 loads
+      Net colp[5]: 6 loads
+      Net colp[6]: 6 loads
+
+Running physical design DRC...
+
+Loading udb::Database ...
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
 
 
-### Lattice Family : iCE40UP
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 64 MB
 
 
-### Device  : iCE40UP5K
+timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "FinalProject_impl_1.tw1" "FinalProject_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt FinalProject_impl_1.tw1 FinalProject_impl_1.udb -gui
+Starting design reading...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+Loading udb::Database ...
+Successfully loading udb, 0.02 seconds
 
 
-### Package : SG48
+Starting design annotation....
 
 
-### Speed   : High-Performance_1.2V
+
+Starting full timing analysis...
+WARNING - "The
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 73 MB
 
 
-                                                         
+par -f "FinalProject_impl_1.p2t" "FinalProject_impl_1_map.udb" "FinalProject_impl_1.udb"
+
+Lattice Place and Route Report for Design "FinalProject_impl_1_map.udb"
+Sun Apr 21 18:32:03 2019
+
+PAR: Place And Route Radiant (64-bit) 1.0.0.350.6.
+Command Line: par -w -t 1 -exp parPathBased=ON FinalProject_impl_1_map.udb \
+	FinalProject_impl_1_par.dir/5_1.udb 
+
+Loading FinalProject_impl_1_map.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+Design:  topvhd
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+WARNING: udb::Constraint "create_generated_clock -name {u_PLL_B/OUTGLOBAL} -source [get_pins Hello.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
+Number of Signals: 395
+Number of Connections: 875
+Device utilization summary:
+
+   SLICE (est.)     108/2640          4% used
+     LUT            201/5280          3% used
+     REG            109/5280          2% used
+   PIO               11/56           19% used
+                     11/36           30% bonded
+   IOLOGIC            0/56            0% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                0/30            0% used
+   PLL                1/1           100% used
+   RGBOUTBUF          0/3             0% used
+   I3C                2/2           100% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   11 out of 11 pins locked (100% locked).
+Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
 
 
-INFO - User-Selected Strategy SettingsOptimization goal = Area
-Top-level module name = topvhd.
-Target frequency = 1.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3
-RWCheckOnRam = 0
+................
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
 
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
+Starting Placer Phase 1. REAL time: 0 secs 
+..  ..
+....................
+
+Placer score = 30479.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            107/2640          4% used
+
+Finished Placer Phase 1.  CPU time: 11 secs , REAL time: 12 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  46407
+Finished Placer Phase 2.  CPU time: 11 secs , REAL time: 12 secs 
 
 
-Mux style = auto (Default)
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
+------------------ Clock Report ------------------
 
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = TRUE
-Output HDL file name = FinalProject_impl_1.vm.
-ROM style = auto
-RAM style = auto
-The -comp option is FALSE.
-The -syn option is FALSE.
--vh2008
+Global Clocks :
+  PRIMARY "pll_clock" from OUTGLOBAL on comp "Hello.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 56, ce load = 0, sr load = 0
 
--path C:/Users/Jonathan/my_designs/FinalProject (searchpath added)
--path C:/Users/Jonathan/my_designs/FinalProject/impl_1 (searchpath added)
--path C:/Users/Jonathan/my_designs/FinalProject/pll (searchpath added)
--path C:/lscc/radiant/1.0/ispfpga/ice40tp/data (searchpath added)
-Mixed language design
-Verilog design file = C:/lscc/radiant/1.0/ip/pmi/pmi.v
-Verilog design file = C:/Users/Jonathan/my_designs/FinalProject/pll/rtl/pll.v
-VHDL library = pmi
-VHDL design file = C:/lscc/radiant/1.0/ip/pmi/pmi.vhd
-VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/toplevel.vhd
-VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/vga.vhd
-VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/toplevelNES.vhd
-VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd
-VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/game.vhd
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Compile design.
-Compile Design Begin
-Analyzing Verilog file c:/lscc/radiant/1.0/ip/pmi/pmi.v. VERI-1482
-INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(1):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_add.v(50):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(2):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_complex_mult.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(3):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(4):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mac.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(5):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_multaddsub.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(6):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mult.v(51):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(7):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dp.v(47):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(8):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(9):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v(50):analyzing included file . VERI-1328Analyzing Verilog file c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v. VERI-1482
-INFO - "c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(9):analyzing included file . VERI-1328Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
-INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4):analyzing package . VHDL-1014Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/toplevel.vhd. VHDL-1481
-INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(4):analyzing entity . VHDL-1012INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(16):analyzing architecture . VHDL-1010Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/vga.vhd. VHDL-1481
-INFO - "c:/users/jonathan/my_designs/finalproject/vga.vhd(4):analyzing entity . VHDL-1012INFO - "c:/users/jonathan/my_designs/finalproject/vga.vhd(15):analyzing architecture . VHDL-1010Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/toplevelnes.vhd. VHDL-1481
-INFO - "c:/users/jonathan/my_designs/finalproject/toplevelnes.vhd(5):analyzing entity . VHDL-1012INFO - "c:/users/jonathan/my_designs/finalproject/toplevelnes.vhd(17):analyzing architecture . VHDL-1010Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd. VHDL-1481
-INFO - "c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd(6):analyzing entity . VHDL-1012INFO - "c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd(28):analyzing architecture . VHDL-1010Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/game.vhd. VHDL-1481
-INFO - "c:/users/jonathan/my_designs/finalproject/game.vhd(5):analyzing entity . VHDL-1012INFO - "c:/users/jonathan/my_designs/finalproject/game.vhd(16):analyzing architecture . VHDL-1010child process exited abnormally
-Fail to run synthesis -f FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/Jonathan/my_designs/FinalProject/promote.xml 
+  PRIMARY  : 1 out of 8 (12%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   11 out of 56 (19.6%) PIO sites used.
+   11 out of 36 (30.6%) bonded PIO sites used.
+   Number of PIO comps: 11; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 8 / 14 ( 57%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%) | OFF        |            |            |
+| 2        | 3 / 8 ( 37%)  | 3.3V       |            |            |
++----------+---------------+------------+------------+------------+
+
+Total Placer CPU time: 11 secs , REAL time: 12 secs 
+
+Writing design to file FinalProject_impl_1_par.dir/5_1.udb ...
+
+
+Start NBR router at 18:32:15 04/21/19
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+187 connections routed with dedicated routing resources
+1 global clock signals routed
+243 connections routed (of 865 total) (28.09%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (1 used out of 8 available):
+#7  Signal "pll_clock"
+       Clock   loads: 56    out of    56 routed (100.00%)
+Other clocks:
+    Signal "NESclk_c"
+       Clock   loads: 0     out of     4 routed (  0.00%)
+       Data    loads: 0     out of     1 routed (  0.00%)
+    Signal "clk"
+       Clock   loads: 0     out of     1 routed (  0.00%)
+    Signal "Hello/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+    TimerIf::skewscore 0
+
+Start NBR section for initial routing at 18:32:16 04/21/19
+Level 4, iteration 1
+15(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 18:32:16 04/21/19
+Level 4, iteration 1
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 2
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 3
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 5
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 6
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 7
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 9
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+Level 4, iteration 16
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 20.331ns/0.000ns; real time: 0 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 18:32:16 04/21/19
+FALSE ARC LibDelays : 16, 0, 16, 0
+
+Start NBR section for re-routing at 18:32:17 04/21/19
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
+
+Start NBR section for post-routing at 18:32:17 04/21/19
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 20.331ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only.
+
+
+FALSE ARC LibDelays : 16, 0, 16, 0
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (1 used out of 8 available):
+#7  Signal "pll_clock"
+       Clock   loads: 56    out of    56 routed (100.00%)
+Other clocks:
+    Signal "NESclk_c"
+       Clock   loads: 4     out of     4 routed (100.00%)
+       Data    loads: 1     out of     1 routed (100.00%)
+    Signal "clk"
+       Clock   loads: 1     out of     1 routed (100.00%)
+    Signal "Hello/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+---------------------------------------------------------
+Total CPU time 2 secs 
+Total REAL time: 3 secs 
+Completely routed.
+End of route.  865 routed (100.00%); 0 unrouted.
+
+Writing design to file FinalProject_impl_1_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Success
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 20.331
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.112
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 14 secs 
+Total REAL Time: 15 secs 
+Peak Memory Usage: 116 MB
+
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+
+timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "FinalProject_impl_1.twr" "FinalProject_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt FinalProject_impl_1.twr FinalProject_impl_1.udb -gui
+Starting design reading...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+Loading udb::Database ...
+Successfully loading udb, 0.03 seconds
+
+
+Starting design annotation....
+
+
+
+Starting full timing analysis...
+WARNING - "The
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 99 MB
+
+
+bitgen -w "FinalProject_impl_1.udb" -f "FinalProject_impl_1.t2b" 
+Loading FinalProject_impl_1.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+
+
+BITGEN: Bitstream Generator Radiant (64-bit) 1.0.0.350.6
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "C:\Users\Jonathan\my_designs\FinalProject\impl_1\FinalProject_impl_1.bin".
+
+backanno "FinalProject_impl_1.udb" -n Verilog  -o "FinalProject_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant (64-bit) 1.0.0.350.6
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist based on the FinalProject_impl_1 design file.
+
+Device performance grade changed to High-Performance_1.2V.
+Loading FinalProject_impl_1.udb ...
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+Writing Verilog netlist to file FinalProject_impl_1_vo.vo
+Writing SDF timing to file FinalProject_impl_1_vo.sdf
+Backanno finished with 0 posted error messages.

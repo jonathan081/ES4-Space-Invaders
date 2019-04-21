@@ -1,4 +1,17 @@
+synthesis:  version Radiant (64-bit) 1.0.0.350.6
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Apr 21 18:31:51 2019
+
+
+Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/Jonathan/my_designs/FinalProject/promote.xml 
+
 Synthesis options:
+The -top option is not used.
 The -a option is iCE40UP.
 The -t option is SG48.
 The -sp option is High-Performance_1.2V.
@@ -26,7 +39,6 @@ The -p option is iCE40UP5K.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Area
-Top-level module name = topvhd.
 Target frequency = 1.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -62,6 +74,7 @@ The -syn option is FALSE.
 -path C:/Users/Jonathan/my_designs/FinalProject/pll (searchpath added)
 -path C:/lscc/radiant/1.0/ispfpga/ice40tp/data (searchpath added)
 Mixed language design
+WARNING - synthesis: A top-level module has not been specified for the mixed language design.
 Verilog design file = C:/lscc/radiant/1.0/ip/pmi/pmi.v
 Verilog design file = C:/Users/Jonathan/my_designs/FinalProject/pll/rtl/pll.v
 VHDL library = pmi
@@ -75,7 +88,7 @@ VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/toplevelNES.vhd
 VHDL library = work
 VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd
 VHDL library = work
-VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/game.vhd
+VHDL design file = C:/Users/Jonathan/my_designs/FinalProject/game2.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
@@ -113,7 +126,203 @@ INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevelnes.vhd(17):
 Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd. VHDL-1481
 INFO - synthesis: c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO - synthesis: c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd(28): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/game.vhd. VHDL-1481
-INFO - synthesis: c:/users/jonathan/my_designs/finalproject/game.vhd(5): analyzing entity game. VHDL-1012
-INFO - synthesis: c:/users/jonathan/my_designs/finalproject/game.vhd(16): analyzing architecture synth. VHDL-1010
-ERROR - synthesis: c:/users/jonathan/my_designs/finalproject/game.vhd(22): pos_xout is not declared. VHDL-1241
+Analyzing VHDL file c:/users/jonathan/my_designs/finalproject/game2.vhd. VHDL-1481
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/game2.vhd(5): analyzing entity game. VHDL-1012
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/game2.vhd(16): analyzing architecture synth. VHDL-1010
+WARNING - synthesis: Setting topvhd as the top-level module. To specify the top-level module explicitly, use the -top option.
+INFO - synthesis: The default VHDL library search path is now "C:/Users/Jonathan/my_designs/FinalProject/impl_1". VHDL-1504
+Top module language type = VHDL.
+unit topvhd is not yet analyzed. VHDL-1485
+c:/users/jonathan/my_designs/finalproject/toplevel.vhd(4): executing topvhd(synth)
+
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(82): using initial value 300 for ship_x_start since it is never assigned. VHDL-1303
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(83): using initial value 300 for ship_y_start since it is never assigned. VHDL-1303
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(89): going to verilog side to elaborate module HSOSC. VHDL-1399
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(89): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(90): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(90): back to VHDL to continue elaboration. VHDL-1400
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(14): replacing existing netlist topvhd(synth). VHDL-1205
+Top module name (VHDL, mixed language): topvhd
+Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[31] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[30] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[29] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[28] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[27] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[26] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[25] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[24] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[23] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[22] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[21] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[20] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[19] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[18] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[17] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[16] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[15] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[14] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[13] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[12] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[11] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[10] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[9] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[8] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[7] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[6] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[5] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[4] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[3] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[2] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[1] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(85): net ship_y[0] does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(95): net \Hello/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(96): net \Hello/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net ship_y[31]. Patching with GND.
+######## Missing driver on net ship_y[30]. Patching with GND.
+######## Missing driver on net ship_y[29]. Patching with GND.
+######## Missing driver on net ship_y[28]. Patching with GND.
+######## Missing driver on net ship_y[27]. Patching with GND.
+######## Missing driver on net ship_y[26]. Patching with GND.
+######## Missing driver on net ship_y[25]. Patching with GND.
+######## Missing driver on net ship_y[24]. Patching with GND.
+######## Missing driver on net ship_y[23]. Patching with GND.
+######## Missing driver on net ship_y[22]. Patching with GND.
+######## Missing driver on net ship_y[21]. Patching with GND.
+######## Missing driver on net ship_y[20]. Patching with GND.
+######## Missing driver on net ship_y[19]. Patching with GND.
+######## Missing driver on net ship_y[18]. Patching with GND.
+######## Missing driver on net ship_y[17]. Patching with GND.
+######## Missing driver on net ship_y[16]. Patching with GND.
+######## Missing driver on net ship_y[15]. Patching with GND.
+######## Missing driver on net ship_y[14]. Patching with GND.
+######## Missing driver on net ship_y[13]. Patching with GND.
+######## Missing driver on net ship_y[12]. Patching with GND.
+######## Missing driver on net ship_y[11]. Patching with GND.
+######## Missing driver on net ship_y[10]. Patching with GND.
+######## Missing driver on net ship_y[9]. Patching with GND.
+######## Missing driver on net ship_y[8]. Patching with GND.
+######## Missing driver on net ship_y[7]. Patching with GND.
+######## Missing driver on net ship_y[6]. Patching with GND.
+######## Missing driver on net ship_y[5]. Patching with GND.
+######## Missing driver on net ship_y[4]. Patching with GND.
+######## Missing driver on net ship_y[3]. Patching with GND.
+######## Missing driver on net ship_y[2]. Patching with GND.
+######## Missing driver on net ship_y[1]. Patching with GND.
+######## Missing driver on net ship_y[0]. Patching with GND.
+######## Missing driver on net \Hello/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \Hello/lscc_pll_inst/sdi_i. Patching with GND.
+
+
+
+WARNING - synthesis: Bit 0 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 13 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \GAMER/posxout is stuck at One
+WARNING - synthesis: Bit 24 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \GAMER/posxout is stuck at One
+WARNING - synthesis: Bit 27 of Register \GAMER/posxout is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \GAMER/posxout is stuck at One
+Applying 1.000000 MHz constraint to all clocks
+
+
+Starting design annotation....
+
+
+WARNING - synthesis: User constraint/setting (may come from constraint file or attribute in HDL) overrides device constraint for port 'OUTGLOBAL' of PLL '\Hello/lscc_pll_inst/u_PLL_B'.
+
+Starting full timing analysis...
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
+
+################### Begin Area Report (topvhd)######################
+Number of register bits => 109 of 5280 (2 % )
+CCU2 => 45
+FD1P3XZ => 109
+HSOSC_CORE => 1
+IB => 1
+LUT4 => 98
+OB => 10
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 3
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : Hello/lscc_pll_inst/pll_clock, loads : 0
+  Net : clk, loads : 1
+  Net : NES/NESclk_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 1
+Top 1 highest fanout Clock Enables:
+  Net : Howdy/row_9__N_189, loads : 65
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : Howdy/row_9__N_189, loads : 65
+  Net : Howdy/row_9__N_187, loads : 32
+  Net : NES/n1260, loads : 20
+  Net : NES/NEScount[0], loads : 9
+  Net : control_c, loads : 8
+  Net : NES/NEScount[1], loads : 8
+  Net : Howdy/colp[4], loads : 6
+  Net : Howdy/colp[0], loads : 6
+  Net : NES/NEScount[2], loads : 6
+  Net : Hola/rgbT_c, loads : 5
+################### End Clock Report ##################
+
+Peak Memory Usage: 152.984  MB
+
+--------------------------------------------------------------
+Total CPU time for LSE flow : 3.938  secs
+Total REAL time for LSE flow : 4.000  secs
+--------------------------------------------------------------
