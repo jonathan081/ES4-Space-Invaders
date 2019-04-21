@@ -1,0 +1,47 @@
+---------------------------------------------------
+Report for cell topvhd
+   Instance path: topvhd
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	     315.00        100.0
+                                 IOBUF	         11        100.0
+                                PFUREG	        106        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                    controller_default	          1        13.7
+                   pattern_gen_default	          1        42.5
+                                   pll	          1         0.0
+                           vga_default	          1        36.8
+---------------------------------------------------
+Report for cell controller_default
+   Instance path: topvhd/NES
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      43.00        13.7
+                                PFUREG	         39        36.8
+---------------------------------------------------
+Report for cell pll
+   Instance path: topvhd/Hello
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")	          1         0.0
+---------------------------------------------------
+Report for cell lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")
+   Instance path: topvhd/Hello/lscc_pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell pattern_gen_default
+   Instance path: topvhd/Hola
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	     134.00        42.5
+---------------------------------------------------
+Report for cell vga_default
+   Instance path: topvhd/Howdy
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	     116.00        36.8
+                                PFUREG	         67        63.2

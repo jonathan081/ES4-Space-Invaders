@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="1555883936">
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1555883936"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1555883936"/>
+        </Milestone>
+        <Milestone name="Map" build_result="0" build_time="1555883936">
+            <Task name="Map" build_result="0" update_result="2" update_time="1555883936"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1555883936"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="0" build_time="1555883936">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1555883936"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1555883936"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="1" build_time="1555885093">
+            <Task name="Lattice_Synthesis" build_result="1" update_result="2" update_time="1555885093"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1555883936"/>
+        </Milestone>
+        <Report name="FinalProject_impl_1.bgn" last_build_time="1555883595" last_build_size="918"/>
+        <Report name="FinalProject_impl_1.bin" last_build_time="1555883595" last_build_size="104156"/>
+        <Report name="FinalProject_impl_1.lsedata" last_build_time="1555883563" last_build_size="283703"/>
+        <Report name="FinalProject_impl_1.tw1.html" last_build_time="1555883567" last_build_size="196327"/>
+        <Report name="FinalProject_impl_1.twr.html" last_build_time="1555883594" last_build_size="124879"/>
+        <Report name="FinalProject_impl_1.udb::log" last_build_time="1555883565" last_build_size="552950"/>
+        <Report name="FinalProject_impl_1.udb::phy_par" last_build_time="1555883592" last_build_size="551119"/>
+        <Report name="FinalProject_impl_1.udb::rtl" last_build_time="1555883563" last_build_size="552950"/>
+        <Report name="FinalProject_impl_1_map.udb" last_build_time="1555883566" last_build_size="509462"/>
+        <Report name="FinalProject_impl_1_vo.sdf" last_build_time="1555883596" last_build_size="205019"/>
+        <Report name="FinalProject_impl_1_vo.vo" last_build_time="1555883596" last_build_size="211422"/>
+    </Strategy>
+</BuildStatus>
+ 

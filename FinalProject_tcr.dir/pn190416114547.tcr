@@ -1,0 +1,12 @@
+#Start recording tcl command: 4/16/2019 11:00:52
+#Project Location: C:/Users/Jonathan/my_designs/FinalProject; Project name: FinalProject
+prj_create -name "FinalProject" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
+prj_save 
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/toplevel.vhd"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/toplevelNES.vhd"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/bga.vhd"
+prj_remove_source "C:/Users/Jonathan/my_designs/FinalProject/bga.vhd"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/vga.vhd"
+prj_run Synthesis -impl impl_1
+#Stop recording: 4/16/2019 11:45:47

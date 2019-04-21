@@ -1,0 +1,207 @@
+     Lattice Mapping Report File for Design Module 'FinalProject_impl_1'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant (64-bit) 1.0.0.350.6
+Mapped on: Sun Apr 21 17:52:45 2019
+
+Design Information
+------------------
+
+Command line:   map FinalProject_impl_1_syn.udb
+     C:/Users/Jonathan/my_designs/FinalProject/FinalProject.pdc -o
+     FinalProject_impl_1.udb -gui
+
+Design Summary
+--------------
+
+   Number of slice registers: 106 out of  5280 (2%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           315 out of  5280 (6%)
+      Number of logic LUT4s:             116
+      Number of inserted feedthru LUT4s:  11
+      Number of ripple logic:             94 (188 LUT4s)
+   Number of IO sites used:   11 out of 39 (28%)
+      Number of IO sites used for general PIOs: 11
+      Number of IO sites used for I3Cs: 0 out of 2 (0%)
+      Number of IO sites used for PIOs+I3Cs: 11 out of 36 (31%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  3
+      Net NESclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
+     NES.i4866_3_lut/OUT)
+      Net pll_clock: 59 loads, 59 rising, 0 falling (Driver: Pin
+     Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net clk: 1 loads, 1 rising, 0 falling (Driver: Pin Hi/CLKHF)
+   Number of Clock Enables:  2
+      Net VCC_net: 1 loads, 0 SLICEs
+      Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
+   Number of LSRs:  6
+      Net NES/n2901: 11 loads, 11 SLICEs
+      Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
+      Net Howdy/row_9__N_187: 17 loads, 17 SLICEs
+      Net Howdy/valid_N_234: 1 loads, 1 SLICEs
+      Net Howdy/n2085: 1 loads, 1 SLICEs
+      Net Howdy/n2028: 1 loads, 1 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net VCC_net: 37 loads
+      Net Howdy/row_9__N_189: 34 loads
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net Hola/ship_x_31__N_371: 31 loads
+      Net Howdy/row_9__N_187: 17 loads
+      Net NES/n2901: 11 loads
+      Net NEScount[0]: 9 loads
+      Net control_c: 8 loads
+      Net colp[4]: 7 loads
+      Net NES/NEScount[1]_2: 7 loads
+      Net NES/NEScount[3]_2: 7 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+
+| IO Name             | Direction | Levelmode |
+|                     |           |  IO_TYPE  |
++---------------------+-----------+-----------+
+| HSYNC               | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| VSYNC               | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[5]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[4]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[3]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[2]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[1]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[0]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| latch               | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| NESclk              | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| control             | INPUT     | LVCMOS33  |
++---------------------+-----------+-----------+
+
+Removed logic
+-------------
+
+Signal GND_net undriven or does not drive anything - clipped.
+Block i1 was optimized away.
+
+
+
+                                    Page 2
+
+
+
+
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            Hello.lscc_pll_inst.u_PLL_B
+  PLL Type:                                     PLL_B
+  Input Reference Clock:               NODE     clk
+  Output Clock(CoreA):                          NONE
+  Output Clock(GlobalA):               NODE     pll_clock
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE     Hello/lscc_pll_inst/feedback_w
+  Internal Feedback output:            NODE     Hello/lscc_pll_inst/feedback_w
+  BYPASS signal:                                GND
+  LATCH signal:                                 GND
+  Lock Signal:                                  NONE
+  Input Clock Frequency (MHz):                  48.0000
+  Reference Divider:                            3
+  Feedback Divider:                             66
+  VCO Divider:                                  5
+  ENABLE_ICEGATE_PORTA:                         0
+  ENABLE_ICEGATE_PORTB:                         0
+  PLLOUT_SELECT_PORTA:                          GENCLK
+  PLLOUT_SELECT_PORTB:                          GENCLK
+  SHIFTREG_DIV_MODE:                            0
+  DELAY_ADJUSTMENT_MODE_RELATIVE:               FIXED
+  FDA_RELATIVE:                                 0
+  FEEDBACK_PATH:                                SIMPLE
+  DELAY_ADJUSTMENT_MODE_FEEDBACK:               FIXED
+  FDA_FEEDBACK:                                 0
+  FILTER_RANGE:                                 1
+  EXTERNAL_DIVIDE_FACTOR:                       NONE
+  TEST Mode:                                    0
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            Hi
+  OSC Type:                                     HSOSC_CORE
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     clk
+  DIV Setting:                                  0b00
+
+ASIC Components
+---------------
+
+Instance Name: Hi
+         Type: HFOSC
+Instance Name: Hello.lscc_pll_inst.u_PLL_B
+         Type: PLL
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 65 MB
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor
+     Corporation,  All rights reserved.

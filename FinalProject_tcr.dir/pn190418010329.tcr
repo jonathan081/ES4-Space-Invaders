@@ -1,0 +1,11 @@
+#Start recording tcl command: 4/18/2019 01:03:17
+#Project Location: C:/Users/Jonathan/my_designs/FinalProject; Project name: FinalProject
+C:/Users/Jonathan/my_designs/Lab5
+Lab5
+#Start recording tcl command: 4/18/2019 01:03:28
+#Project Location: C:/Users/Jonathan/my_designs/Lab5; Project name: Lab5
+prj_open "C:/Users/Jonathan/my_designs/FinalProject/FinalProject.rdf"
+prj_save 
+prj_close
+prj_open "C:/Users/Jonathan/my_designs/Lab5/Lab5.rdf"
+#Stop recording: 4/18/2019 01:03:29
