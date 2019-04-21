@@ -1,0 +1,81 @@
+#Start recording tcl command: 4/21/2019 17:13:26
+#Project Location: C:/Users/Jonathan/my_designs/FinalProject; Project name: FinalProject
+prj_open "C:/Users/Jonathan/my_designs/FinalProject/FinalProject.rdf"
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/game.vhd"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_disable_source "C:/Users/Jonathan/my_designs/FinalProject/game.vhd"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/game2.vhd"
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Synthesis -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_remove_source "C:/Users/Jonathan/my_designs/FinalProject/game2.vhd"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_add_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen_basic.vhd"
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_disable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen_basic.vhd"
+prj_enable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_disable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
+prj_enable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen_basic.vhd"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_enable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
+prj_disable_source "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen_basic.vhd"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+#Stop recording: 4/21/2019 19:09:50

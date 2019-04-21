@@ -42,7 +42,6 @@
 "C:/Users/Jonathan/my_designs/FinalProject/toplevelNES.vhd"
 "C:/Users/Jonathan/my_designs/FinalProject/pattern_gen.vhd"
 -ver "C:/Users/Jonathan/my_designs/FinalProject/pll/rtl/pll.v"
--lib "work" -vhd "C:/Users/Jonathan/my_designs/FinalProject/game2.vhd"
 
 
 -path "C:/Users/Jonathan/my_designs/FinalProject"

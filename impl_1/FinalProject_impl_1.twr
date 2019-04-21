@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.0.350.6
 
-Sun Apr 21 18:32:19 2019
+Sun Apr 21 19:06:57 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -65,7 +65,37 @@ create_generated_clock -name {Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [ge
 
 1.2  Combinational Loop
 ========================
-None
+Combinational Loops
+-------------------
+++++ Loop1
+Hola/add_98_add_4_11/B0	->	Hola/add_98_add_4_11/S0
+
+++++ Loop2
+Hola/add_98_add_4_9/B0	->	Hola/add_98_add_4_9/S0
+
+++++ Loop3
+Hola/add_98_add_4_9/B1	->	Hola/add_98_add_4_9/S1
+
+++++ Loop4
+Hola/add_98_add_4_7/B0	->	Hola/add_98_add_4_7/S0
+
+++++ Loop5
+Hola/add_98_add_4_7/B1	->	Hola/add_98_add_4_7/S1
+
+++++ Loop6
+Hola/add_98_add_4_5/B0	->	Hola/add_98_add_4_5/S0
+
+++++ Loop7
+Hola/add_98_add_4_5/B1	->	Hola/add_98_add_4_5/S1
+
+++++ Loop8
+Hola/add_98_add_4_3/B0	->	Hola/add_98_add_4_3/S0
+
+++++ Loop9
+Hola/add_98_add_4_3/B1	->	Hola/add_98_add_4_3/S1
+
+++++ Loop10
+Hola/add_98_add_4_1/B1	->	Hola/add_98_add_4_1/S1
 
 ==============================================
 2  CLOCK SUMMARY
@@ -100,7 +130,7 @@ Single Clock Domain
 Clock Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL|                    |       Period       |     Frequency      
 ----------------------------------------------------------------------------------------------------------
  From Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL|             Target |          39.800 ns |         25.126 MHz 
-                                           | Actual (all paths) |          19.469 ns |         51.364 MHz 
+                                           | Actual (all paths) |          19.589 ns |         51.049 MHz 
 ----------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -119,7 +149,7 @@ Clock Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL|   Worst Time Between Edges   |     
 
 3.1.1  Constraint Coverage
 ---------------------------
-Constraint Coverage: 74.0169%
+Constraint Coverage: 66.9291%
 
 3.1.2  Timing Errors
 ---------------------
@@ -148,7 +178,7 @@ c_pll_inst.u_PLL_B/OUTGLOBAL} -source [
 get_pins {Hello/lscc_pll_inst/u_PLL_B/R                                                                                                    
 EFERENCECLK}] -multiply_by 67 -divide_b                                                                                                    
 y 128 [get_pins {Hello/lscc_pll_inst/u_                                                                                                    
-PLL_B/OUTGLOBAL }]                      |   39.800 ns |   20.331 ns |    6   |   19.469 ns |  51.364 MHz |       163      |        0       
+PLL_B/OUTGLOBAL }]                      |   39.800 ns |   20.211 ns |    6   |   19.589 ns |  51.049 MHz |       163      |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.2.2  Setup Critical Endpoint Summary 
@@ -156,26 +186,24 @@ PLL_B/OUTGLOBAL }]                      |   39.800 ns |   20.331 ns |    6   |  
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-{Howdy/countr__i30/SR   Howdy/countr__i31/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i28/SR   Howdy/countr__i29/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i26/SR   Howdy/countr__i27/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i24/SR   Howdy/countr__i25/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i22/SR   Howdy/countr__i23/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i20/SR   Howdy/countr__i21/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i18/SR   Howdy/countr__i19/SR}              
-                                         |   20.332 ns 
-{Howdy/countr__i16/SR   Howdy/countr__i17/SR}              
-                                         |   20.332 ns 
+Howdy/countr__i32/SR                     |   20.212 ns 
 {Howdy/countr__i14/SR   Howdy/countr__i15/SR}              
-                                         |   20.332 ns 
+                                         |   20.808 ns 
 {Howdy/countr__i12/SR   Howdy/countr__i13/SR}              
-                                         |   20.332 ns 
+                                         |   20.808 ns 
+{Howdy/countr__i10/SR   Howdy/countr__i11/SR}              
+                                         |   20.808 ns 
+{Howdy/countr__i8/SR   Howdy/countr__i9/SR}              
+                                         |   20.808 ns 
+{Howdy/countr__i6/SR   Howdy/countr__i7/SR}              
+                                         |   20.808 ns 
+{Howdy/countr__i4/SR   Howdy/countr__i5/SR}              
+                                         |   20.808 ns 
+{Howdy/countr__i2/SR   Howdy/countr__i3/SR}              
+                                         |   20.808 ns 
+Howdy/countr__i1/SR                      |   20.808 ns 
+{Howdy/countr__i30/SR   Howdy/countr__i31/SR}              
+                                         |   21.404 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -201,7 +229,7 @@ c_pll_inst.u_PLL_B/OUTGLOBAL} -source [
 get_pins {Hello/lscc_pll_inst/u_PLL_B/R                                                                                                    
 EFERENCECLK}] -multiply_by 67 -divide_b                                                                                                    
 y 128 [get_pins {Hello/lscc_pll_inst/u_                                                                                                    
-PLL_B/OUTGLOBAL }]                      |    0.000 ns |    3.112 ns |    2   |        ---- |        ---- |       167      |        0       
+PLL_B/OUTGLOBAL }]                      |    0.000 ns |    3.112 ns |    2   |        ---- |        ---- |       163      |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.3.2  Hold Critical Endpoint Summary 
@@ -210,16 +238,16 @@ PLL_B/OUTGLOBAL }]                      |    0.000 ns |    3.112 ns |    2   |  
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-Howdy/von_39/D                           |    3.112 ns 
-NES/NEScount_i8/D                        |    3.112 ns 
-NES/NEScount_i7/D                        |    3.112 ns 
 NES/NESclk_68/D                          |    3.112 ns 
-NES/count_124__i0/D                      |    3.417 ns 
-NES/count_124__i3/D                      |    3.417 ns 
-NES/count_124__i4/D                      |    3.417 ns 
-NES/count_124__i1/D                      |    3.417 ns 
-NES/count_124__i2/D                      |    3.417 ns 
-NES/count_124__i19/D                     |    3.417 ns 
+NES/count_155__i0/D                      |    3.417 ns 
+NES/count_155__i19/D                     |    3.417 ns 
+NES/count_155__i18/D                     |    3.417 ns 
+NES/count_155__i17/D                     |    3.417 ns 
+NES/count_155__i15/D                     |    3.417 ns 
+NES/count_155__i16/D                     |    3.417 ns 
+NES/count_155__i14/D                     |    3.417 ns 
+NES/count_155__i13/D                     |    3.417 ns 
+NES/count_155__i12/D                     |    3.417 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -236,41 +264,39 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
-GAMER/posxout_i1/Q                      |          No required time
-GAMER/posxout_i2/Q                      |          No required time
-NES/button_i7/Q                         |           No arrival time
-NES/button_i6/Q                         |           No arrival time
-NES/button_i2/Q                         |           No arrival time
-NES/button_i3/Q                         |           No arrival time
-NES/button_i4/Q                         |           No arrival time
-NES/button_i5/Q                         |           No arrival time
-NES/button_i0/Q                         |           No arrival time
-NES/button_i1/Q                         |           No arrival time
+NES/NEScount_i7/Q                       |          No required time
+NES/NEScount_i6/Q                       |          No required time
+NES/NESclk_68/Q                         |          No required time
+NES/NEScount_i5/Q                       |          No required time
+NES/NEScount_i4/Q                       |          No required time
+NES/NEScount_i3/Q                       |          No required time
+NES/NEScount_i2/Q                       |          No required time
+NES/NEScount_i1/Q                       |          No required time
+NES/NEScount_i0/Q                       |          No required time
+NES/button_i7/Q                         |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                        25
+ints                                    |                        22
                                         |                          
 -------------------------------------------------------------------
 
 Clocked but unconstrained timing end points
 -------------------------------------------------------------------
-         Listing 10 End Points          |           Type           
+          Listing 8 End Points          |           Type           
 -------------------------------------------------------------------
-GAMER/posxout_i1/D                      |           No arrival time
-GAMER/posxout_i1/SR                     |           No arrival time
-GAMER/posxout_i3/D                      |           No arrival time
-NES/button_i1/D                         |          No required time
+NES/button_i7/D                         |          No required time
 NES/button_i2/D                         |          No required time
 NES/button_i4/D                         |          No required time
-NES/button_i7/D                         |          No required time
 NES/button_i6/D                         |          No required time
 NES/button_i5/D                         |          No required time
 NES/button_i3/D                         |          No required time
+NES/button_i1/D                         |          No required time
+NES/button_i0/D                         |          No required time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        12
+ts                                      |                         8
                                         |                          
 -------------------------------------------------------------------
 
@@ -291,15 +317,15 @@ create_generated_clock,
      Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
 control                                 |                     input
-NESclk                                  |                    output
-latch                                   |                    output
-rgbT[0]                                 |                    output
-rgbT[1]                                 |                    output
-rgbT[2]                                 |                    output
 HSYNC                                   |                    output
 VSYNC                                   |                    output
 rgbT[5]                                 |                    output
 rgbT[4]                                 |                    output
+rgbT[3]                                 |                    output
+rgbT[2]                                 |                    output
+rgbT[1]                                 |                    output
+rgbT[0]                                 |                    output
+latch                                   |                    output
 -------------------------------------------------------------------
                                         |                          
 Number of I/O ports without constraint  |                        11
@@ -348,15 +374,15 @@ Period margin    : 0.00333333 ns  (Passed)
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i30/SR   Howdy/countr__i31/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : Howdy/countr__i32/SR
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.211 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -369,9 +395,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         19.059
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.686
 
  
 Source Clock Path
@@ -380,30 +406,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        4.530        29.686  1       
 
 
 Destination Clock Path
@@ -412,9 +441,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -422,15 +451,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i28/SR   Howdy/countr__i29/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i14/SR   Howdy/countr__i15/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -443,9 +472,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -454,30 +483,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -486,9 +518,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -496,15 +528,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i26/SR   Howdy/countr__i27/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i12/SR   Howdy/countr__i13/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -517,9 +549,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -528,30 +560,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -560,9 +595,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -570,15 +605,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i24/SR   Howdy/countr__i25/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i10/SR   Howdy/countr__i11/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -591,9 +626,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -602,30 +637,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -634,9 +672,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -644,15 +682,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i22/SR   Howdy/countr__i23/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i8/SR   Howdy/countr__i9/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -665,9 +703,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -676,30 +714,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -708,9 +749,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -718,15 +759,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i20/SR   Howdy/countr__i21/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i6/SR   Howdy/countr__i7/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -739,9 +780,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -750,30 +791,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -782,9 +826,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -792,15 +836,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i18/SR   Howdy/countr__i19/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i4/SR   Howdy/countr__i5/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -813,9 +857,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -824,30 +868,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -856,9 +903,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -866,15 +913,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i16/SR   Howdy/countr__i17/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i2/SR   Howdy/countr__i3/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -887,9 +934,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -898,30 +945,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -930,9 +980,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -940,15 +990,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i14/SR   Howdy/countr__i15/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : Howdy/countr__i1/SR
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 20.807 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -961,9 +1011,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         18.463
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            29.090
 
  
 Source Clock Path
@@ -972,30 +1022,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.934        29.090  1       
 
 
 Destination Clock Path
@@ -1004,9 +1057,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -1014,15 +1067,15 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i13/Q
-Path End         : {Howdy/countr__i12/SR   Howdy/countr__i13/SR}
+Path Begin       : Howdy/countc_156__i20/Q
+Path End         : {Howdy/countr__i30/SR   Howdy/countr__i31/SR}
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 6
-Delay Ratio      : 80.6% (route), 19.4% (logic)
+Delay Ratio      : 79.5% (route), 20.5% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 20.331 ns  (Passed)
+Path Slack       : 21.403 ns  (Passed)
 
   Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                    0.000
@@ -1035,9 +1088,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                              0.000
 + Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                         18.939
++ Data Path Delay                                                         17.867
 -----------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            29.566
+End-of-path arrival time( ns )                                            28.494
 
  
 Source Clock Path
@@ -1046,30 +1099,33 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countc_125__i12/CK   Howdy/countc_125__i13/CK}->Howdy/countc_125__i13/Q
-                                          SLICE_R15C4C    CLK_TO_Q1_DELAY  1.391        12.018  2       
-Howdy/countc[12]                                          NET DELAY        2.079        14.097  1       
-Howdy/i1_2_lut_adj_37/B->Howdy/i1_2_lut_adj_37/Z
-                                          SLICE_R16C5D    B0_TO_F0_DELAY   0.477        14.574  1       
-Howdy/n22                                                 NET DELAY        0.305        14.879  1       
-Howdy/i16_4_lut/C->Howdy/i16_4_lut/Z      SLICE_R16C5D    C1_TO_F1_DELAY   0.450        15.329  1       
-Howdy/n37                                                 NET DELAY        2.768        18.097  1       
-Howdy/i20_4_lut/D->Howdy/i20_4_lut/Z      SLICE_R16C4B    D0_TO_F0_DELAY   0.450        18.547  3       
-Howdy/n1218                                               NET DELAY        2.556        21.103  1       
-Howdy/i1_4_lut_adj_32/A->Howdy/i1_4_lut_adj_32/Z
-                                          SLICE_R17C4B    A0_TO_F0_DELAY   0.450        21.553  3       
-Howdy/n62                                                 NET DELAY        3.629        25.182  1       
-SLICE_103/A1->SLICE_103/F1                SLICE_R21C4B    A1_TO_F1_DELAY   0.450        25.632  17      
-Howdy/row_9__N_187                                        NET DELAY        3.934        29.566  1       
+{Howdy/countc_156__i20/CK   Howdy/countc_156__i21/CK}->Howdy/countc_156__i20/Q
+                                          SLICE_R16C16C   CLK_TO_Q0_DELAY  1.391        12.018  2       
+Howdy/countc[19]                                          NET DELAY        2.146        14.164  1       
+Howdy/i3_2_lut_adj_42/A->Howdy/i3_2_lut_adj_42/Z
+                                          SLICE_R17C16B   A0_TO_F0_DELAY   0.450        14.614  1       
+Howdy/n24_adj_314                                         NET DELAY        2.556        17.170  1       
+Howdy/i17_4_lut_adj_38/A->Howdy/i17_4_lut_adj_38/Z
+                                          SLICE_R17C15A   A1_TO_F1_DELAY   0.477        17.647  1       
+Howdy/n38_adj_311                                         NET DELAY        0.305        17.952  1       
+Howdy/i20_4_lut_adj_34/C->Howdy/i20_4_lut_adj_34/Z
+                                          SLICE_R17C15B   C0_TO_F0_DELAY   0.450        18.402  3       
+Howdy/n1347                                               NET DELAY        2.768        21.170  1       
+Howdy/i1_4_lut_adj_33/D->Howdy/i1_4_lut_adj_33/Z
+                                          SLICE_R17C13B   D0_TO_F0_DELAY   0.450        21.620  3       
+Howdy/n62                                                 NET DELAY        3.086        24.706  1       
+Howdy/i2_3_lut_4_lut_adj_32/B->Howdy/i2_3_lut_4_lut_adj_32/Z
+                                          SLICE_R17C10B   B1_TO_F1_DELAY   0.450        25.156  17      
+Howdy/row_9__N_187                                        NET DELAY        3.338        28.494  1       
 
 
 Destination Clock Path
@@ -1078,9 +1134,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -1104,7 +1160,7 @@ pll_clock                                                    NET DELAY      5.51
 
 4.2.2  Hold path details for constraint: create_generated_clock -name {Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
-167 endpoints scored, 0 timing errors detected.
+163 endpoints scored, 0 timing errors detected.
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
@@ -1112,7 +1168,7 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : NES/count_124__i9/Q
+Path Begin       : NES/count_155__i9/Q
 Path End         : NES/NESclk_68/D
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
@@ -1144,20 +1200,20 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i9/CK   NES/count_124__i10/CK}->NES/count_124__i9/Q
-                                          SLICE_R8C4B     CLK_TO_Q0_DELAY  1.391        12.018  3       
+{NES/count_155__i9/CK   NES/count_155__i10/CK}->NES/count_155__i9/Q
+                                          SLICE_R9C5B     CLK_TO_Q0_DELAY  1.391        12.018  3       
 NES/count[9]                                              NET DELAY        1.271        13.289  1       
-SLICE_66/D0->SLICE_66/F0                  SLICE_R9C4C     D0_TO_F0_DELAY   0.450        13.739  1       
-NES/count[9]/sig_010/FeedThruLUT                          NET DELAY        0.000        13.739  1       
+SLICE_159/D1->SLICE_159/F1                SLICE_R10C4B    D1_TO_F1_DELAY   0.450        13.739  1       
+NES/count[9]/sig_002/FeedThruLUT                          NET DELAY        0.000        13.739  1       
 
 
 Destination Clock Path
@@ -1166,9 +1222,9 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
@@ -1176,201 +1232,8 @@ pll_clock                                                    NET DELAY      5.51
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : NES/count_124__i18/Q
-Path End         : NES/NEScount_i8/D
-Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Logic Level      : 2
-Delay Ratio      : 40.8% (route), 59.2% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.112 ns  (Passed)
-
-  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
-+ Master Clock Source Latency                                                    0.000
-+ Destination Clock Uncertainty                                                  0.000
-+ Destination Clock Path Delay                                                  10.627
-+ Hold Time                                                                     -0.000
-----------------------------------------------------------------------------   -------
-End-of-path required time( ns )                                                 10.627
-
-  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
-+ Master Clock Source Latency                                              0.000
-+ Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                          3.112
------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            13.739
-
- 
-Source Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i17/CK   NES/count_124__i18/CK}->NES/count_124__i18/Q
-                                          SLICE_R8C5B     CLK_TO_Q1_DELAY  1.391        12.018  3       
-NES/count[18]                                             NET DELAY        1.271        13.289  1       
-SLICE_48/D1->SLICE_48/F1                  SLICE_R9C4D     D1_TO_F1_DELAY   0.450        13.739  1       
-NES/count[18]/sig_001/FeedThruLUT                         NET DELAY        0.000        13.739  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-
-
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : NES/count_124__i17/Q
-Path End         : NES/NEScount_i7/D
-Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Logic Level      : 2
-Delay Ratio      : 40.8% (route), 59.2% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.112 ns  (Passed)
-
-  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
-+ Master Clock Source Latency                                                    0.000
-+ Destination Clock Uncertainty                                                  0.000
-+ Destination Clock Path Delay                                                  10.627
-+ Hold Time                                                                     -0.000
-----------------------------------------------------------------------------   -------
-End-of-path required time( ns )                                                 10.627
-
-  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
-+ Master Clock Source Latency                                              0.000
-+ Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                          3.112
------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            13.739
-
- 
-Source Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i17/CK   NES/count_124__i18/CK}->NES/count_124__i17/Q
-                                          SLICE_R8C5B     CLK_TO_Q0_DELAY  1.391        12.018  3       
-NES/count[17]                                             NET DELAY        1.271        13.289  1       
-SLICE_50/D0->SLICE_50/F0                  SLICE_R9C5A     D0_TO_F0_DELAY   0.450        13.739  1       
-NES/count[17]/sig_002/FeedThruLUT                         NET DELAY        0.000        13.739  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-
-
- ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : Howdy/countr__i2/Q
-Path End         : Howdy/von_39/D
-Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Logic Level      : 2
-Delay Ratio      : 40.8% (route), 59.2% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.112 ns  (Passed)
-
-  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
-+ Master Clock Source Latency                                                    0.000
-+ Destination Clock Uncertainty                                                  0.000
-+ Destination Clock Path Delay                                                  10.627
-+ Hold Time                                                                     -0.000
-----------------------------------------------------------------------------   -------
-End-of-path required time( ns )                                                 10.627
-
-  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
-+ Master Clock Source Latency                                              0.000
-+ Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                          3.112
------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            13.739
-
- 
-Source Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{Howdy/countr__i2/CK   Howdy/countr__i3/CK}->Howdy/countr__i2/Q
-                                          SLICE_R22C3B    CLK_TO_Q0_DELAY  1.391        12.018  3       
-Howdy/rowp[1]                                             NET DELAY        1.271        13.289  1       
-Howdy/i2_4_lut_adj_50/D->Howdy/i2_4_lut_adj_50/Z
-                                          SLICE_R21C3D    D1_TO_F1_DELAY   0.450        13.739  1       
-Howdy/n2406                                               NET DELAY        0.000        13.739  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-
-
- ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : NES/count_124__i18/Q
-Path End         : NES/count_124__i18/D
+Path Begin       : NES/count_155__i9/Q
+Path End         : NES/count_155__i9/D
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1401,150 +1264,20 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i17/CK   NES/count_124__i18/CK}->NES/count_124__i18/Q
-                                          SLICE_R8C5B     CLK_TO_Q1_DELAY  1.391        12.018  3       
-NES/count[18]                                             NET DELAY        1.576        13.594  1       
-NES/count_124_add_4_19/C1->NES/count_124_add_4_19/S1
-                                          SLICE_R8C5B     C1_TO_F1_DELAY   0.450        14.044  1       
-NES/n85[18]                                               NET DELAY        0.000        14.044  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-
-
- ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : NES/count_124__i17/Q
-Path End         : NES/count_124__i17/D
-Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.417 ns  (Passed)
-
-  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
-+ Master Clock Source Latency                                                    0.000
-+ Destination Clock Uncertainty                                                  0.000
-+ Destination Clock Path Delay                                                  10.627
-+ Hold Time                                                                     -0.000
-----------------------------------------------------------------------------   -------
-End-of-path required time( ns )                                                 10.627
-
-  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
-+ Master Clock Source Latency                                              0.000
-+ Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                          3.417
------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            14.044
-
- 
-Source Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i17/CK   NES/count_124__i18/CK}->NES/count_124__i17/Q
-                                          SLICE_R8C5B     CLK_TO_Q0_DELAY  1.391        12.018  3       
-NES/count[17]                                             NET DELAY        1.576        13.594  1       
-NES/count_124_add_4_19/C0->NES/count_124_add_4_19/S0
-                                          SLICE_R8C5B     C0_TO_F0_DELAY   0.450        14.044  1       
-NES/n85[17]                                               NET DELAY        0.000        14.044  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-
-
- ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : NES/count_124__i9/Q
-Path End         : NES/count_124__i9/D
-Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
-Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
-Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 3.417 ns  (Passed)
-
-  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
-+ Master Clock Source Latency                                                    0.000
-+ Destination Clock Uncertainty                                                  0.000
-+ Destination Clock Path Delay                                                  10.627
-+ Hold Time                                                                     -0.000
-----------------------------------------------------------------------------   -------
-End-of-path required time( ns )                                                 10.627
-
-  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
-+ Master Clock Source Latency                                              0.000
-+ Source Clock Path Delay                                                 10.627
-+ Data Path Delay                                                          3.417
------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                            14.044
-
- 
-Source Clock Path
-Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  -----------------  -------------  -----  ------------  ------  
-Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
-clk                                                          NET DELAY      4.967         4.967  1       
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
-Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
-pll_clock                                                    NET DELAY      5.510        10.627  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i9/CK   NES/count_124__i10/CK}->NES/count_124__i9/Q
-                                          SLICE_R8C4B     CLK_TO_Q0_DELAY  1.391        12.018  3       
+{NES/count_155__i9/CK   NES/count_155__i10/CK}->NES/count_155__i9/Q
+                                          SLICE_R9C5B     CLK_TO_Q0_DELAY  1.391        12.018  3       
 NES/count[9]                                              NET DELAY        1.576        13.594  1       
-NES/count_124_add_4_11/C0->NES/count_124_add_4_11/S0
-                                          SLICE_R8C4B     C0_TO_F0_DELAY   0.450        14.044  1       
+NES/count_155_add_4_11/C0->NES/count_155_add_4_11/S0
+                                          SLICE_R9C5B     C0_TO_F0_DELAY   0.450        14.044  1       
 NES/n85[9]                                                NET DELAY        0.000        14.044  1       
 
 
@@ -1554,18 +1287,18 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 
 
- ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : NES/count_124__i10/Q
-Path End         : NES/count_124__i10/D
+Path Begin       : NES/count_155__i17/Q
+Path End         : NES/count_155__i17/D
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1596,21 +1329,21 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i9/CK   NES/count_124__i10/CK}->NES/count_124__i10/Q
-                                          SLICE_R8C4B     CLK_TO_Q1_DELAY  1.391        12.018  3       
-NES/count[10]                                             NET DELAY        1.576        13.594  1       
-NES/count_124_add_4_11/C1->NES/count_124_add_4_11/S1
-                                          SLICE_R8C4B     C1_TO_F1_DELAY   0.450        14.044  1       
-NES/n85[10]                                               NET DELAY        0.000        14.044  1       
+{NES/count_155__i17/CK   NES/count_155__i18/CK}->NES/count_155__i17/Q
+                                          SLICE_R9C6B     CLK_TO_Q0_DELAY  1.391        12.018  3       
+NES/count[17]                                             NET DELAY        1.576        13.594  1       
+NES/count_155_add_4_19/C0->NES/count_155_add_4_19/S0
+                                          SLICE_R9C6B     C0_TO_F0_DELAY   0.450        14.044  1       
+NES/n85[17]                                               NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1619,18 +1352,18 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 
 
- ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : NES/count_124__i3/Q
-Path End         : NES/count_124__i3/D
+Path Begin       : NES/count_155__i7/Q
+Path End         : NES/count_155__i7/D
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1661,21 +1394,21 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{NES/count_124__i3/CK   NES/count_124__i4/CK}->NES/count_124__i3/Q
-                                          SLICE_R8C3C     CLK_TO_Q0_DELAY  1.391        12.018  2       
-NES/count[3]                                              NET DELAY        1.576        13.594  1       
-NES/count_124_add_4_5/C0->NES/count_124_add_4_5/S0
-                                          SLICE_R8C3C     C0_TO_F0_DELAY   0.450        14.044  1       
-NES/n85[3]                                                NET DELAY        0.000        14.044  1       
+{NES/count_155__i7/CK   NES/count_155__i8/CK}->NES/count_155__i7/Q
+                                          SLICE_R9C5A     CLK_TO_Q0_DELAY  1.391        12.018  2       
+NES/count[7]                                              NET DELAY        1.576        13.594  1       
+NES/count_155_add_4_9/C0->NES/count_155_add_4_9/S0
+                                          SLICE_R9C5A     C0_TO_F0_DELAY   0.450        14.044  1       
+NES/n85[7]                                                NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1684,18 +1417,18 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 
 
- ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : Howdy/countc_125__i32/Q
-Path End         : Howdy/countc_125__i32/D
+Path Begin       : NES/count_155__i4/Q
+Path End         : NES/count_155__i4/D
 Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1726,20 +1459,150 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-Howdy/countc_125__i32/CK->Howdy/countc_125__i32/Q
-                                          SLICE_R15C7A    CLK_TO_Q0_DELAY  1.391        12.018  5       
+{NES/count_155__i3/CK   NES/count_155__i4/CK}->NES/count_155__i4/Q
+                                          SLICE_R9C4C     CLK_TO_Q1_DELAY  1.391        12.018  2       
+NES/count[4]                                              NET DELAY        1.576        13.594  1       
+NES/count_155_add_4_5/C1->NES/count_155_add_4_5/S1
+                                          SLICE_R9C4C     C1_TO_F1_DELAY   0.450        14.044  1       
+NES/n85[4]                                                NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : NES/count_155__i16/Q
+Path End         : NES/count_155__i16/D
+Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                    0.000
++ Destination Clock Uncertainty                                                  0.000
++ Destination Clock Path Delay                                                  10.627
++ Hold Time                                                                     -0.000
+----------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                 10.627
+
+  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                              0.000
++ Source Clock Path Delay                                                 10.627
++ Data Path Delay                                                          3.417
+-----------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                            14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{NES/count_155__i15/CK   NES/count_155__i16/CK}->NES/count_155__i16/Q
+                                          SLICE_R9C6A     CLK_TO_Q1_DELAY  1.391        12.018  3       
+NES/count[16]                                             NET DELAY        1.576        13.594  1       
+NES/count_155_add_4_17/C1->NES/count_155_add_4_17/S1
+                                          SLICE_R9C6A     C1_TO_F1_DELAY   0.450        14.044  1       
+NES/n85[16]                                               NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : Howdy/countc_156__i32/Q
+Path End         : Howdy/countc_156__i32/D
+Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                    0.000
++ Destination Clock Uncertainty                                                  0.000
++ Destination Clock Path Delay                                                  10.627
++ Hold Time                                                                     -0.000
+----------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                 10.627
+
+  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                              0.000
++ Source Clock Path Delay                                                 10.627
++ Data Path Delay                                                          3.417
+-----------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                            14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+Howdy/countc_156__i32/CK->Howdy/countc_156__i32/Q
+                                          SLICE_R16C18A   CLK_TO_Q0_DELAY  1.391        12.018  5       
 Howdy/countc[31]                                          NET DELAY        1.576        13.594  1       
-Howdy/countc_125_add_4_33/C0->Howdy/countc_125_add_4_33/S0
-                                          SLICE_R15C7A    C0_TO_F0_DELAY   0.450        14.044  1       
+Howdy/countc_156_add_4_33/C0->Howdy/countc_156_add_4_33/S0
+                                          SLICE_R16C18A   C0_TO_F0_DELAY   0.450        14.044  1       
 Howdy/n133[31]                                            NET DELAY        0.000        14.044  1       
 
 
@@ -1749,9 +1612,204 @@ Name                                      Cell/Site Name     Delay Name     Dela
 Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
 clk                                                          NET DELAY      4.967         4.967  1       
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
-                                          PLL_PLL_R13C32                    0.000         4.967  56      
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
 Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
-                                          PLL_PLL_R13C32                    0.150         5.117  56      
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : Howdy/countc_156__i1/Q
+Path End         : Howdy/countc_156__i1/D
+Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                    0.000
++ Destination Clock Uncertainty                                                  0.000
++ Destination Clock Path Delay                                                  10.627
++ Hold Time                                                                     -0.000
+----------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                 10.627
+
+  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                              0.000
++ Source Clock Path Delay                                                 10.627
++ Data Path Delay                                                          3.417
+-----------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                            14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+Howdy/countc_156__i1/CK->Howdy/countc_156__i1/Q
+                                          SLICE_R16C14A   CLK_TO_Q1_DELAY  1.391        12.018  5       
+colp[0]                                                   NET DELAY        1.576        13.594  1       
+Howdy/countc_156_add_4_1/C1->Howdy/countc_156_add_4_1/S1
+                                          SLICE_R16C14A   C1_TO_F1_DELAY   0.450        14.044  1       
+Howdy/n133[0]                                             NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : Howdy/countc_156__i2/Q
+Path End         : Howdy/countc_156__i2/D
+Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                    0.000
++ Destination Clock Uncertainty                                                  0.000
++ Destination Clock Path Delay                                                  10.627
++ Hold Time                                                                     -0.000
+----------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                 10.627
+
+  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                              0.000
++ Source Clock Path Delay                                                 10.627
++ Data Path Delay                                                          3.417
+-----------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                            14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{Howdy/countc_156__i2/CK   Howdy/countc_156__i3/CK}->Howdy/countc_156__i2/Q
+                                          SLICE_R16C14B   CLK_TO_Q0_DELAY  1.391        12.018  5       
+colp[1]                                                   NET DELAY        1.576        13.594  1       
+Howdy/countc_156_add_4_3/C0->Howdy/countc_156_add_4_3/S0
+                                          SLICE_R16C14B   C0_TO_F0_DELAY   0.450        14.044  1       
+Howdy/n133[1]                                             NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : Howdy/countc_156__i3/Q
+Path End         : Howdy/countc_156__i3/D
+Source Clock     : Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                    0.000
++ Destination Clock Uncertainty                                                  0.000
++ Destination Clock Path Delay                                                  10.627
++ Hold Time                                                                     -0.000
+----------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                 10.627
+
+  Source Clock Arrival Time (Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                              0.000
++ Source Clock Path Delay                                                 10.627
++ Data Path Delay                                                          3.417
+-----------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                            14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
+pll_clock                                                    NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{Howdy/countc_156__i2/CK   Howdy/countc_156__i3/CK}->Howdy/countc_156__i3/Q
+                                          SLICE_R16C14B   CLK_TO_Q1_DELAY  1.391        12.018  5       
+colp[2]                                                   NET DELAY        1.576        13.594  1       
+Howdy/countc_156_add_4_3/C1->Howdy/countc_156_add_4_3/S1
+                                          SLICE_R16C14B   C1_TO_F1_DELAY   0.450        14.044  1       
+Howdy/n133[2]                                             NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+Hi/CLKHF                                  HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  54      
+Hello/lscc_pll_inst/u_PLL_B/REFERENCECLK->Hello/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  54      
 pll_clock                                                    NET DELAY      5.510        10.627  1       
 
 
