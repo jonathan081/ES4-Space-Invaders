@@ -58,7 +58,8 @@ port(
 	col : in unsigned(9 downto 0);
 	valid : in std_logic;
 	button: in std_logic_vector(7 downto 0);
-	rgb : out std_logic_vector(5 downto 0));
+	rgb : out std_logic_vector(5 downto 0)
+	);
 end component;
 
 signal clk : std_logic;
@@ -79,6 +80,6 @@ NES: controller port map(button_sig, latch, NESclk, control, pll_clock);
 
 
 Howdy : vga port map(pll_clock, HSYNC, VSYNC, rowp, colp, validp);
-Hola : pattern_gen port map(clk, rowp, colp, validp, button_sig, rgbT);
+Hola : pattern_gen port map(pll_clock, rowp, colp, validp, button_sig, rgbT);
 
 end;

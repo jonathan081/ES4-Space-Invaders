@@ -9,7 +9,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 21 19:06:34 2019
+Tue Apr 23 19:23:23 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/Jonathan/my_designs/FinalProject/promote.xml 
@@ -104,7 +104,7 @@ INFO - "c:/users/jonathan/my_designs/finalproject/pattern_gen.vhd(6):analyzing e
 unit topvhd is not yet analyzed. VHDL-1485
 c:/users/jonathan/my_designs/finalproject/toplevel.vhd(4): executing topvhd(synth)
 
-INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(76):going to verilog side to elaborate module . VHDL-1399INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(76):back to VHDL to continue elaboration. VHDL-1400INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77):going to verilog side to elaborate module . VHDL-1399INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77):back to VHDL to continue elaboration. VHDL-1400WARNING - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(14):replacing existing netlist (topvhd). VHDL-1205Top module name (VHDL, mixed language): topvhd
+INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77):going to verilog side to elaborate module . VHDL-1399INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77):back to VHDL to continue elaboration. VHDL-1400INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(78):going to verilog side to elaborate module . VHDL-1399INFO - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(78):back to VHDL to continue elaboration. VHDL-1400WARNING - "c:/users/jonathan/my_designs/finalproject/toplevel.vhd(14):replacing existing netlist (topvhd). VHDL-1205Top module name (VHDL, mixed language): topvhd
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
                                                          
 
@@ -130,72 +130,12 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
                                                          
 
 
-WARNING - Initial value found on net pos_x[9] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[8] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[7] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[6] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[5] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[4] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[3] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[2] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[1] will be ignored due to unrecognized driver typeWARNING - Initial value found on net pos_x[0] will be ignored due to unrecognized driver typeWARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(95):net  does not have a driver. VDB-1002WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(96):net  does not have a driver. VDB-1002######## Missing driver on net \Hello/lscc_pll_inst/sclk_i. Patching with GND.
+WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(95):net  does not have a driver. VDB-1002WARNING - "c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(96):net  does not have a driver. VDB-1002######## Missing driver on net \Hello/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \Hello/lscc_pll_inst/sdi_i. Patching with GND.
 
 
 
-Combinational loop found : 1
-
-	Net \Hola/pos_x[9] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 2
-
-	Net \Hola/pos_x[8] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 3
-
-	Net \Hola/pos_x[7] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 4
-
-	Net \Hola/pos_x[6] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 5
-
-	Net \Hola/pos_x[5] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 6
-
-	Net \Hola/pos_x[4] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 7
-
-	Net \Hola/pos_x[3] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 8
-
-	Net \Hola/pos_x[2] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 9
-
-	Net \Hola/rgb_5__N_242[1] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 10
-
-	Net \Hola/rgb_5__N_242[0] 
-
-	Instance add_98_add_4 
-
-Applying 1.000000 MHz constraint to all clocks
+WARNING - Bit 0 of Register \Hola/pos_y is stuck at ZeroWARNING - Bit 1 of Register \Hola/pos_y is stuck at OneWARNING - Bit 2 of Register \Hola/pos_y is stuck at OneWARNING - Bit 3 of Register \Hola/pos_y is stuck at OneWARNING - Bit 4 of Register \Hola/pos_y is stuck at ZeroWARNING - Bit 5 of Register \Hola/pos_y is stuck at ZeroWARNING - Bit 6 of Register \Hola/pos_y is stuck at ZeroWARNING - Bit 7 of Register \Hola/pos_y is stuck at ZeroWARNING - Bit 8 of Register \Hola/pos_y is stuck at OneWARNING - Bit 9 of Register \Hola/pos_y is stuck at ZeroApplying 1.000000 MHz constraint to all clocks
 
 
 Starting design annotation....
@@ -203,15 +143,15 @@ Starting design annotation....
 
 WARNING - User constraint/setting (may come from constraint file or attribute in HDL) overrides device constraint for port 'OUTGLOBAL' of PLL '\Hello/lscc_pll_inst/u_PLL_B'.
 Starting full timing analysis...
-Worst slack in design 964950
+Worst slack in design 964882
 WARNING - "TheWARNING - "TheWARNING - "The
 ################### Begin Area Report (topvhd)######################
-Number of register bits => 106 of 5280 (2 % )
+Number of register bits => 111 of 5280 (2 % )
 CCU2 => 61
-FD1P3XZ => 106
+FD1P3XZ => 111
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 105
+LUT4 => 130
 OB => 10
 PLL_B => 1
 ################### End Area Report ##################
@@ -225,28 +165,28 @@ Number of Clocks: 3
   Net : clk, loads : 1
   Net : NES/NESclk_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 1
-Top 1 highest fanout Clock Enables:
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
   Net : Howdy/row_9__N_189, loads : 64
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : Howdy/row_9__N_189, loads : 64
   Net : Howdy/row_9__N_187, loads : 32
-  Net : NES/n1560, loads : 20
-  Net : NES/NEScount[1], loads : 10
-  Net : NES/NEScount[0], loads : 10
-  Net : Hola/n227, loads : 9
-  Net : control_c, loads : 8
-  Net : Howdy/colp[4], loads : 6
-  Net : NES/NEScount[2], loads : 6
-  Net : Hola/rgbT_c, loads : 5
+  Net : NES/n1215, loads : 20
+  Net : NES/button_sig[6], loads : 10
+  Net : Howdy/n1195, loads : 10
+  Net : Hola/pos_x[9], loads : 9
+  Net : Howdy/rowp[3], loads : 8
+  Net : Howdy/colp[4], loads : 8
+  Net : Howdy/rowp[9], loads : 7
+  Net : Howdy/rowp[5], loads : 7
 ################### End Clock Report ##################
 
-Peak Memory Usage: 152.629  MB
+Peak Memory Usage: 153.266  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.828  secs
-Total REAL time for LSE flow : 4.000  secs
+Total CPU time for LSE flow : 5.328  secs
+Total REAL time for LSE flow : 6.000  secs
 --------------------------------------------------------------
 
 
@@ -267,7 +207,7 @@ Writing output file 'FinalProject_impl_1.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 71 MB
+Peak Memory Usage: 72 MB
 
 
 map "FinalProject_impl_1_syn.udb" "C:/Users/Jonathan/my_designs/FinalProject/FinalProject.pdc" -o "FinalProject_impl_1.udb"     
@@ -301,10 +241,10 @@ Optimizing...
 
 
 Design Summary:
-   Number of slice registers: 106 out of  5280 (2%)
+   Number of slice registers: 111 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           239 out of  5280 (5%)
-      Number of logic LUT4s:             106
+   Number of LUT4s:           263 out of  5280 (5%)
+      Number of logic LUT4s:             130
       Number of inserted feedthru LUT4s:  11
       Number of ripple logic:             61 (122 LUT4s)
    Number of IO sites used:   11 out of 39 (28%)
@@ -326,30 +266,32 @@ Design Summary:
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  3
-      Net pll_clock: 59 loads, 59 rising, 0 falling (Driver: Pin Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
-      Net NESclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin NES.i4_4_lut/OUT)
+      Net pll_clock: 68 loads, 68 rising, 0 falling (Driver: Pin Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net NESclk_c: 3 loads, 3 rising, 0 falling (Driver: Pin NES.i3_4_lut/OUT)
       Net clk: 1 loads, 1 rising, 0 falling (Driver: Pin Hi/CLKHF)
-   Number of Clock Enables:  2
+   Number of Clock Enables:  3
       Net VCC_net: 1 loads, 0 SLICEs
       Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
-   Number of LSRs:  6
-      Net NES/n1560: 11 loads, 11 SLICEs
+      Net n1195: 9 loads, 9 SLICEs
+   Number of LSRs:  7
+      Net NES/n1215: 11 loads, 11 SLICEs
       Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
       Net Howdy/row_9__N_187: 17 loads, 17 SLICEs
+      Net Howdy/n942: 1 loads, 1 SLICEs
       Net Howdy/valid_N_234: 1 loads, 1 SLICEs
-      Net Howdy/n1143: 1 loads, 1 SLICEs
-      Net Howdy/n1132: 1 loads, 1 SLICEs
+      Net Howdy/n943: 1 loads, 1 SLICEs
+      Net Hola/n1217: 3 loads, 3 SLICEs
    Top 10 highest fanout non-clock nets:
       Net Howdy/row_9__N_189: 34 loads
       Net Howdy/row_9__N_187: 17 loads
       Net VCC_net: 15 loads
-      Net NES/n1560: 11 loads
-      Net NES/NEScount[0]: 10 loads
-      Net NES/NEScount[1]: 10 loads
-      Net Hola/n234[6]: 9 loads
-      Net control_c: 8 loads
-      Net colp[4]: 7 loads
-      Net colp[6]: 6 loads
+      Net button_sig[6]: 11 loads
+      Net NES/n1215: 11 loads
+      Net n1195: 10 loads
+      Net colp[4]: 9 loads
+      Net Hola/pos_x[9]: 9 loads
+      Net rowp[3]: 9 loads
+      Net colp[8]: 8 loads
 
 Running physical design DRC...
 
@@ -363,7 +305,7 @@ Loading udb::Database ...
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 64 MB
+Peak Memory Usage: 65 MB
 
 
 timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "FinalProject_impl_1.tw1" "FinalProject_impl_1.udb" 
@@ -381,15 +323,15 @@ Starting design annotation....
 Starting full timing analysis...
 WARNING - "The
 STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 73 MB
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 74 MB
 
 
 par -f "FinalProject_impl_1.p2t" "FinalProject_impl_1_map.udb" "FinalProject_impl_1.udb"
 
 Lattice Place and Route Report for Design "FinalProject_impl_1_map.udb"
-Sun Apr 21 19:06:40 2019
+Tue Apr 23 19:23:33 2019
 
 PAR: Place And Route Radiant (64-bit) 1.0.0.350.6.
 Command Line: par -w -t 1 -exp parPathBased=ON FinalProject_impl_1_map.udb \
@@ -404,13 +346,13 @@ Package: SG48
 Performance Grade:   High-Performance_1.2V
 
 WARNING: udb::Constraint "create_generated_clock -name {u_PLL_B/OUTGLOBAL} -source [get_pins Hello.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 453
-Number of Connections: 980
+Number of Signals: 482
+Number of Connections: 1081
 Device utilization summary:
 
-   SLICE (est.)     127/2640          4% used
-     LUT            239/5280          4% used
-     REG            106/5280          2% used
+   SLICE (est.)     141/2640          5% used
+     LUT            263/5280          4% used
+     REG            111/5280          2% used
    PIO               11/56           19% used
                      11/36           30% bonded
    IOLOGIC            0/56            0% used
@@ -432,34 +374,34 @@ Device utilization summary:
 
 Pin Constraint Summary:
    11 out of 11 pins locked (100% locked).
-Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+Finished Placer Phase 0 (HIER).  CPU time: 1 secs , REAL time: 0 secs 
 
 
 ....................
-Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
+Finished Placer Phase 0 (AP).  CPU time: 2 secs , REAL time: 2 secs 
 
-Starting Placer Phase 1. REAL time: 0 secs 
+Starting Placer Phase 1. REAL time: 2 secs 
 ..  ..
 ....................
 
-Placer score = 32766.
+Placer score = 39982.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE            123/2640          4% used
+   SLICE            137/2640          5% used
 
-Finished Placer Phase 1.  CPU time: 12 secs , REAL time: 12 secs 
+Finished Placer Phase 1.  CPU time: 19 secs , REAL time: 20 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  47500
-Finished Placer Phase 2.  CPU time: 12 secs , REAL time: 12 secs 
+Placer score =  55601
+Finished Placer Phase 2.  CPU time: 19 secs , REAL time: 20 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "pll_clock" from OUTGLOBAL on comp "Hello.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 54, ce load = 0, sr load = 0
+  PRIMARY "pll_clock" from OUTGLOBAL on comp "Hello.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 62, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
 
@@ -481,12 +423,12 @@ I/O Bank Usage Summary:
 | 2        | 3 / 8 ( 37%)  | 3.3V       |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 12 secs , REAL time: 12 secs 
+Total Placer CPU time: 19 secs , REAL time: 20 secs 
 
 Writing design to file FinalProject_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 19:06:53 04/21/19
+Start NBR router at 19:23:53 04/23/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -504,17 +446,17 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-210 connections routed with dedicated routing resources
+215 connections routed with dedicated routing resources
 1 global clock signals routed
-264 connections routed (of 971 total) (27.19%)
+277 connections routed (of 1072 total) (25.84%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
 #7  Signal "pll_clock"
-       Clock   loads: 54    out of    54 routed (100.00%)
+       Clock   loads: 62    out of    62 routed (100.00%)
 Other clocks:
     Signal "NESclk_c"
-       Clock   loads: 0     out of     4 routed (  0.00%)
+       Clock   loads: 0     out of     2 routed (  0.00%)
        Data    loads: 0     out of     1 routed (  0.00%)
     Signal "clk"
        Clock   loads: 0     out of     1 routed (  0.00%)
@@ -525,63 +467,33 @@ Other clocks:
 Completed routing resource preassignment
     TimerIf::skewscore 0
 
-Start NBR section for initial routing at 19:06:53 04/21/19
+Start NBR section for initial routing at 19:23:54 04/23/19
 Level 4, iteration 1
-21(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
+17(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.874ns/0.000ns; real time: 2 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 19:06:54 04/21/19
+Start NBR section for normal routing at 19:23:55 04/23/19
 Level 4, iteration 1
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 10.874ns/0.000ns; real time: 2 secs 
 Level 4, iteration 2
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 10.874ns/0.000ns; real time: 2 secs 
 Level 4, iteration 3
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 4
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 5
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 6
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 7
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 8
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 9
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 10
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 11
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 12
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
-Level 4, iteration 13
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20.211ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 10.874ns/0.000ns; real time: 2 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 19:06:54 04/21/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 19:23:55 04/23/19
 FALSE ARC LibDelays : 16, 0, 16, 0
 
-Start NBR section for re-routing at 19:06:54 04/21/19
+Start NBR section for re-routing at 19:23:56 04/23/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for post-routing at 19:06:54 04/21/19
+Start NBR section for post-routing at 19:23:56 04/23/19
 
 End NBR router with 0 unrouted connection
 
@@ -589,7 +501,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 20.211ns
+  Estimated worst slack<setup> : 10.874ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only.
@@ -600,35 +512,35 @@ FALSE ARC LibDelays : 16, 0, 16, 0
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
 #7  Signal "pll_clock"
-       Clock   loads: 54    out of    54 routed (100.00%)
+       Clock   loads: 62    out of    62 routed (100.00%)
 Other clocks:
     Signal "NESclk_c"
-       Clock   loads: 4     out of     4 routed (100.00%)
+       Clock   loads: 2     out of     2 routed (100.00%)
        Data    loads: 1     out of     1 routed (100.00%)
     Signal "clk"
        Clock   loads: 1     out of     1 routed (100.00%)
     Signal "Hello/lscc_pll_inst/feedback_w"
        Clock   loads: 1     out of     1 routed (100.00%)
 ---------------------------------------------------------
-Total CPU time 2 secs 
-Total REAL time: 3 secs 
+Total CPU time 5 secs 
+Total REAL time: 6 secs 
 Completely routed.
-End of route.  971 routed (100.00%); 0 unrouted.
+End of route.  1072 routed (100.00%); 0 unrouted.
 
 Writing design to file FinalProject_impl_1_par.dir/5_1.udb ...
 
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 20.211
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 10.874
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.112
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 15 secs 
-Total REAL Time: 16 secs 
-Peak Memory Usage: 116 MB
+Total CPU  Time: 25 secs 
+Total REAL Time: 26 secs 
+Peak Memory Usage: 122 MB
 
 
 par done!
@@ -644,7 +556,7 @@ timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt FinalProject_impl
 Starting design reading...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
 Loading udb::Database ...
-Successfully loading udb, 0.03 seconds
+Successfully loading udb, 0.06 seconds
 
 
 Starting design annotation....
@@ -654,9 +566,9 @@ Starting design annotation....
 Starting full timing analysis...
 WARNING - "The
 STA Runtime and Peak Memory Usage :
-Total CPU Time: 1 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 99 MB
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 100 MB
 
 
 bitgen -w "FinalProject_impl_1.udb" -f "FinalProject_impl_1.t2b" 

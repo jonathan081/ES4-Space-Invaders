@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 21 19:06:34 2019
+Tue Apr 23 19:23:23 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f FinalProject_impl_1_lattice.synproj -gui -msgset C:/Users/Jonathan/my_designs/FinalProject/promote.xml 
@@ -130,10 +130,10 @@ Top module language type = VHDL.
 unit topvhd is not yet analyzed. VHDL-1485
 c:/users/jonathan/my_designs/finalproject/toplevel.vhd(4): executing topvhd(synth)
 
-INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(76): going to verilog side to elaborate module HSOSC. VHDL-1399
-INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(76): back to VHDL to continue elaboration. VHDL-1400
-INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77): going to verilog side to elaborate module HSOSC. VHDL-1399
 INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(77): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(78): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(78): back to VHDL to continue elaboration. VHDL-1400
 WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/toplevel.vhd(14): replacing existing netlist topvhd(synth). VHDL-1205
 Top module name (VHDL, mixed language): topvhd
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
@@ -161,16 +161,6 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
                                                          
 
 
-WARNING - synthesis: Initial value found on net pos_x[9] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[8] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[7] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[6] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[5] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[4] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[3] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[2] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[1] will be ignored due to unrecognized driver type
-WARNING - synthesis: Initial value found on net pos_x[0] will be ignored due to unrecognized driver type
 WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47): input port sclk_i is not connected on this instance. VDB-1013
 WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/pll.v(47): input port sdi_i is not connected on this instance. VDB-1013
 WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc_pll.v(95): net \Hello/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
@@ -180,66 +170,16 @@ WARNING - synthesis: c:/users/jonathan/my_designs/finalproject/pll/rtl/core/lscc
 
 
 
-Combinational loop found : 1
-
-	Net \Hola/pos_x[9] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 2
-
-	Net \Hola/pos_x[8] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 3
-
-	Net \Hola/pos_x[7] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 4
-
-	Net \Hola/pos_x[6] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 5
-
-	Net \Hola/pos_x[5] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 6
-
-	Net \Hola/pos_x[4] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 7
-
-	Net \Hola/pos_x[3] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 8
-
-	Net \Hola/pos_x[2] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 9
-
-	Net \Hola/rgb_5__N_242[1] 
-
-	Instance add_98_add_4 
-
-Combinational loop found : 10
-
-	Net \Hola/rgb_5__N_242[0] 
-
-	Instance add_98_add_4 
-
+WARNING - synthesis: Bit 0 of Register \Hola/pos_y is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \Hola/pos_y is stuck at One
+WARNING - synthesis: Bit 2 of Register \Hola/pos_y is stuck at One
+WARNING - synthesis: Bit 3 of Register \Hola/pos_y is stuck at One
+WARNING - synthesis: Bit 4 of Register \Hola/pos_y is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \Hola/pos_y is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \Hola/pos_y is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \Hola/pos_y is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \Hola/pos_y is stuck at One
+WARNING - synthesis: Bit 9 of Register \Hola/pos_y is stuck at Zero
 Applying 1.000000 MHz constraint to all clocks
 
 
@@ -254,12 +194,12 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 ################### Begin Area Report (topvhd)######################
-Number of register bits => 106 of 5280 (2 % )
+Number of register bits => 111 of 5280 (2 % )
 CCU2 => 61
-FD1P3XZ => 106
+FD1P3XZ => 111
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 105
+LUT4 => 130
 OB => 10
 PLL_B => 1
 ################### End Area Report ##################
@@ -273,26 +213,26 @@ Number of Clocks: 3
   Net : clk, loads : 1
   Net : NES/NESclk_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 1
-Top 1 highest fanout Clock Enables:
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
   Net : Howdy/row_9__N_189, loads : 64
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : Howdy/row_9__N_189, loads : 64
   Net : Howdy/row_9__N_187, loads : 32
-  Net : NES/n1560, loads : 20
-  Net : NES/NEScount[1], loads : 10
-  Net : NES/NEScount[0], loads : 10
-  Net : Hola/n227, loads : 9
-  Net : control_c, loads : 8
-  Net : Howdy/colp[4], loads : 6
-  Net : NES/NEScount[2], loads : 6
-  Net : Hola/rgbT_c, loads : 5
+  Net : NES/n1215, loads : 20
+  Net : NES/button_sig[6], loads : 10
+  Net : Howdy/n1195, loads : 10
+  Net : Hola/pos_x[9], loads : 9
+  Net : Howdy/rowp[3], loads : 8
+  Net : Howdy/colp[4], loads : 8
+  Net : Howdy/rowp[9], loads : 7
+  Net : Howdy/rowp[5], loads : 7
 ################### End Clock Report ##################
 
-Peak Memory Usage: 152.629  MB
+Peak Memory Usage: 153.266  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.828  secs
-Total REAL time for LSE flow : 4.000  secs
+Total CPU time for LSE flow : 5.328  secs
+Total REAL time for LSE flow : 6.000  secs
 --------------------------------------------------------------

@@ -5,7 +5,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant (64-bit) 1.0.0.350.6
-Mapped on: Sun Apr 21 19:06:39 2019
+Mapped on: Tue Apr 23 19:23:30 2019
 
 Design Information
 ------------------
@@ -17,10 +17,10 @@ Command line:   map FinalProject_impl_1_syn.udb
 Design Summary
 --------------
 
-   Number of slice registers: 106 out of  5280 (2%)
+   Number of slice registers: 111 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           239 out of  5280 (5%)
-      Number of logic LUT4s:             106
+   Number of LUT4s:           263 out of  5280 (5%)
+      Number of logic LUT4s:             130
       Number of inserted feedthru LUT4s:  11
       Number of ripple logic:             61 (122 LUT4s)
    Number of IO sites used:   11 out of 39 (28%)
@@ -42,24 +42,24 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  3
-      Net pll_clock: 59 loads, 59 rising, 0 falling (Driver: Pin
+      Net pll_clock: 68 loads, 68 rising, 0 falling (Driver: Pin
      Hello.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
-      Net NESclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin NES.i4_4_lut/OUT)
+      Net NESclk_c: 3 loads, 3 rising, 0 falling (Driver: Pin NES.i3_4_lut/OUT)
       Net clk: 1 loads, 1 rising, 0 falling (Driver: Pin Hi/CLKHF)
-   Number of Clock Enables:  2
+   Number of Clock Enables:  3
       Net VCC_net: 1 loads, 0 SLICEs
       Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
-   Number of LSRs:  6
-      Net NES/n1560: 11 loads, 11 SLICEs
+      Net n1195: 9 loads, 9 SLICEs
+   Number of LSRs:  7
+      Net NES/n1215: 11 loads, 11 SLICEs
       Net Howdy/row_9__N_189: 17 loads, 17 SLICEs
       Net Howdy/row_9__N_187: 17 loads, 17 SLICEs
+      Net Howdy/n942: 1 loads, 1 SLICEs
       Net Howdy/valid_N_234: 1 loads, 1 SLICEs
-      Net Howdy/n1143: 1 loads, 1 SLICEs
-      Net Howdy/n1132: 1 loads, 1 SLICEs
+      Net Howdy/n943: 1 loads, 1 SLICEs
+      Net Hola/n1217: 3 loads, 3 SLICEs
    Top 10 highest fanout non-clock nets:
       Net Howdy/row_9__N_189: 34 loads
-      Net Howdy/row_9__N_187: 17 loads
-      Net VCC_net: 15 loads
 
                                     Page 1
 
@@ -69,13 +69,15 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net NES/n1560: 11 loads
-      Net NES/NEScount[0]: 10 loads
-      Net NES/NEScount[1]: 10 loads
-      Net Hola/n234[6]: 9 loads
-      Net control_c: 8 loads
-      Net colp[4]: 7 loads
-      Net colp[6]: 6 loads
+      Net Howdy/row_9__N_187: 17 loads
+      Net VCC_net: 15 loads
+      Net button_sig[6]: 11 loads
+      Net NES/n1215: 11 loads
+      Net n1195: 10 loads
+      Net colp[4]: 9 loads
+      Net Hola/pos_x[9]: 9 loads
+      Net rowp[3]: 9 loads
+      Net colp[8]: 8 loads
 
 
 
@@ -95,6 +97,16 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |
 |                     |           |  IO_TYPE  |
 +---------------------+-----------+-----------+
+| control             | INPUT     | LVCMOS33  |
++---------------------+-----------+-----------+
+| NESclk              | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| latch               | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[0]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| rgbT[1]             | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
 | HSYNC               | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
 | VSYNC               | OUTPUT    | LVCMOS33  |
@@ -107,24 +119,12 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+
 | rgbT[2]             | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| rgbT[1]             | OUTPUT    | LVCMOS33  |
-+---------------------+-----------+-----------+
-| rgbT[0]             | OUTPUT    | LVCMOS33  |
-+---------------------+-----------+-----------+
-| latch               | OUTPUT    | LVCMOS33  |
-+---------------------+-----------+-----------+
-| NESclk              | OUTPUT    | LVCMOS33  |
-+---------------------+-----------+-----------+
-| control             | INPUT     | LVCMOS33  |
-+---------------------+-----------+-----------+
 
 Removed logic
 -------------
 
 Signal GND_net undriven or does not drive anything - clipped.
 Block i1 was optimized away.
-
-
 
 
                                     Page 2
@@ -191,7 +191,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 64 MB
+   Peak Memory Usage: 65 MB
 
                                     Page 3
 
