@@ -33,8 +33,11 @@ signal enemy_x: unsigned(9 downto 0);
 signal enemy_y: unsigned(9 downto 0);
 signal enemy_move: std_logic;
 signal state : std_logic_vector(1 downto 0) := "00";
-
-type ram_arr is array (0 to 1) of std_logic_vector(4 downto 0);
+signal bullet_x : unsigned(9 downto 0);
+signal bullet_y : unsigned(9 downto 0);
+signal fire : std_logic;
+signal hit : std_logic;
+type ram_arr is array (0 to 3) of std_logic_vector(1 downto 0);
 signal RAM : ram_arr;
 begin
 
@@ -46,37 +49,69 @@ process(clk, row, col) begin
 			if (button(3) = '1') then --start screen
 				pos_x <= to_unsigned(500, 10);
 				pos_y <= to_unsigned(450, 10);
-				enemy_x <= to_unsigned(300, 10);
+				enemy_x <= to_unsigned(400, 10);
 				enemy_y <= to_unsigned(200, 10);
 				RAM(0)(0) <= '1';
 				RAM(1)(0) <= '1';
 				RAM(0)(1) <= '1';
 				RAM(1)(1) <= '1';
+				RAM(2)(0) <= '1';
+				RAM(2)(1) <= '1';
+				RAM(3)(0) <= '1';
+				RAM(3)(1) <= '1';
+
 				state <= "01";
 			else
 				state <= "00";
 			end if;
 		
 		when "01" =>
-			if(pos_x < to_unsigned(250, 10)) then
-				pos_x <= to_unsigned(250, 10);
-			
-			elsif(pos_x > to_unsigned(750, 10)) then
-				pos_x <= to_unsigned(750, 10);
-			
+			if(pos_x < to_unsigned(350, 10)) then
+				pos_x <= to_unsigned(350, 10);		
+			elsif(pos_x > to_unsigned(640, 10)) then
+				pos_x <= to_unsigned(640, 10);
 			elsif(button(6) = '1') then -- Go left
 				pos_x <= pos_x - 1;
 			elsif(button(7) = '1') then -- Go right
 				pos_x <= pos_x + 1;
 			end if;
+			
+			
+			if (button(0) = '1' and fire = '0') then --Firing
+				bullet_x <= pos_x;
+				bullet_y <= pos_y - 40;
+				fire <= '1';
+			end if;
 
-			if(enemy_x > to_unsigned(586, 10)) then
-				enemy_y <= enemy_y + 1;
-				enemy_x <= to_unsigned(586,10);
+			if (fire = '1') then
+				bullet_y <= bullet_y - 5;
+			end if;
+			
+			for i in 0 to 4 loop
+				for j in 0 to 2 loop
+					if (RAM(i)(j) = '1' and hit = '0' and fire = '1' and bullet_x < ((enemy_x + (64 *i) + 15)) and bullet_x > ((enemy_x + (64 *i) - 15)) 
+					and bullet_y > ((enemy_y + (64 *j) - 15)) and bullet_y < ((enemy_y + (64 *j) + 15))) then
+						RAM(i)(j) <= '0';
+						hit <= '1';
+						fire <= '0';
+					end if;
+
+				end loop;
+			end loop;
+			hit <= '0';
+		
+			if (bullet_y < 120) then
+				fire <= '0';
+			end if;
+
+
+			if(enemy_x > to_unsigned(458, 10)) then
+				enemy_y <= enemy_y + 5;
+				enemy_x <= to_unsigned(458,10);
 				enemy_move <= '0';
 		
 			elsif(enemy_x < to_unsigned(350, 10)) then
-				enemy_y <= enemy_y + 1;
+				enemy_y <= enemy_y + 5;
 				enemy_x <= to_unsigned(350,10);
 				enemy_move <= '1';
 
@@ -123,14 +158,30 @@ process(clk, row, col) begin
 end process;
 
 	rgb <= 
-			"111111" when (valid = '1' and state = "01" and row < pos_y + 20 and row > pos_y - 20
+			"111111" when (valid = '1' and state = "01" and row < pos_y + 15 and row > pos_y - 15
 					and col < pos_x + 20 and col > pos_x - 20) else
-			"110000" when (valid = '1' and RAM(0)(0) = '1' and state = "01" and row < enemy_y + 20 and row > enemy_y - 20
-					and col < enemy_x + 20 and col > enemy_x - 20)else
-			"110000" when (valid = '1' and RAM(1)(0) = '1' and state = "01" and row < enemy_y + 20 and row > enemy_y - 20
-					and col < (enemy_x + 64) + 20 and col > (enemy_x + 64) - 20)else
-			"110000" when (valid = '1' and RAM(0)(1) = '1' and state = "01" and row < (enemy_y + 64) + 20 and row > (enemy_y + 64) - 20
-					and col < enemy_x + 20 and col > enemy_x - 20)else
-			"110000" when (valid = '1' and RAM(1)(1) = '1' and state = "01" and row < (enemy_y + 64) + 20 and row > (enemy_y + 64) - 20
-					and col < (enemy_x + 64) + 20 and col > (enemy_x + 64) - 20)else "000000";					
+			--Our ship
+					
+			"110000" when (valid = '1' and RAM(0)(0) = '1' and state = "01" and row < enemy_y + 15 and row > enemy_y - 15
+					and col < enemy_x + 15 and col > enemy_x - 15)else
+			"110000" when (valid = '1' and RAM(1)(0) = '1' and state = "01" and row < enemy_y + 15 and row > enemy_y - 15
+					and col < (enemy_x + 64) + 15 and col > (enemy_x + 64) - 15)else
+									
+			"110000" when (valid = '1' and RAM(0)(1) = '1' and state = "01" and row < (enemy_y + 64) + 15 and row > (enemy_y + 64) - 15
+					and col < enemy_x + 15 and col > enemy_x - 15)else
+			"110000" when (valid = '1' and RAM(1)(1) = '1' and state = "01" and row < (enemy_y + 64) + 15 and row > (enemy_y + 64) - 15
+					and col < (enemy_x + 64) + 15 and col > (enemy_x + 64) - 15) else
+										
+			"110000" when (valid = '1' and RAM(2)(0) = '1' and state = "01" and row < (enemy_y) + 15 and row > (enemy_y) - 15
+					and col < (enemy_x + 128) + 15 and col > (enemy_x + 128) - 15)else
+			"110000" when (valid = '1' and RAM(2)(1) = '1' and state = "01" and row < (enemy_y + 64) + 15 and row > (enemy_y + 64) - 15
+					and col < (enemy_x + 128) + 15 and col > (enemy_x + 128) - 15) else
+						
+			"110000" when (valid = '1' and RAM(3)(0) = '1' and state = "01" and row < enemy_y + 15 and row > enemy_y - 15
+					and col < (enemy_x + 192) + 15 and col > (enemy_x + 192) - 15)else
+			"110000" when (valid = '1' and RAM(3)(1) = '1' and state = "01" and row < (enemy_y + 64) + 15 and row > (enemy_y + 64) - 15
+					and col < (enemy_x + 192) + 15 and col > (enemy_x + 192) - 15)else	
+			--bullet		
+			"001100" when (valid = '1' and fire = '1' and state = "01" and row < bullet_y + 5 and row > bullet_y - 5
+					and col < bullet_x + 3 and col > bullet_x - 3)else "000000";	
 end;
