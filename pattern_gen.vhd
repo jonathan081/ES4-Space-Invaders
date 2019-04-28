@@ -37,10 +37,12 @@ signal bullet_x : unsigned(9 downto 0);
 signal bullet_y : unsigned(9 downto 0);
 signal fire : std_logic;
 signal hit : std_logic;
+signal shipsalive : std_logic;
+signal lost_game: std_logic;
 type ram_arr is array (0 to 3) of std_logic_vector(1 downto 0);
 signal RAM : ram_arr;
-begin
 
+begin
 process(clk, row, col) begin
 	
 	if rising_edge(clk) and row = 0 and col = 0 then
@@ -78,17 +80,15 @@ process(clk, row, col) begin
 			
 			
 			if (button(0) = '1' and fire = '0') then --Firing
-				bullet_x <= pos_x;
+				 bullet_x <= pos_x;
 				bullet_y <= pos_y - 40;
 				fire <= '1';
-			end if;
-
-			if (fire = '1') then
+			elsif (fire = '1') then
 				bullet_y <= bullet_y - 5;
 			end if;
-			
-			for i in 0 to 4 loop
-				for j in 0 to 2 loop
+
+			for i in 0 to 3 loop
+				for j in 0 to 1 loop
 					if (RAM(i)(j) = '1' and hit = '0' and fire = '1' and bullet_x < ((enemy_x + (64 *i) + 15)) and bullet_x > ((enemy_x + (64 *i) - 15)) 
 					and bullet_y > ((enemy_y + (64 *j) - 15)) and bullet_y < ((enemy_y + (64 *j) + 15))) then
 						RAM(i)(j) <= '0';
@@ -111,7 +111,7 @@ process(clk, row, col) begin
 				enemy_move <= '0';
 		
 			elsif(enemy_x < to_unsigned(350, 10)) then
-				enemy_y <= enemy_y + 5;
+				enemy_y <= enemy_y + 7;
 				enemy_x <= to_unsigned(350,10);
 				enemy_move <= '1';
 
@@ -120,33 +120,42 @@ process(clk, row, col) begin
 			else
 				enemy_x <= enemy_x - 1;
 			end if;
-			state <= "01";
-		when "10" =>
-			if (button(3) = '1') then --start screen
-				pos_x <= to_unsigned(500, 10);
-				pos_y <= to_unsigned(450, 10);
-				enemy_x <= to_unsigned(300, 10);
-				enemy_y <= to_unsigned(200, 10);
-				RAM(0)(0) <= '1';
-				RAM(1)(0) <= '1';
-				RAM(0)(1) <= '1';
-				RAM(1)(1) <= '1';
+
+			shipsalive <= '0';
+			lost_game <= '0';
+			for i in 0 to 3 loop
+				for j in 0 to 1 loop
+					if (RAM(i)(j) = '1' and (enemy_y + (64 * j) + 15) > 430)then
+						lost_game <= '1';
+						shipsalive <= '1';
+					elsif (RAM(i)(j) = '1') then 
+						shipsalive <= '1';
+					end if;
+				end loop;
+			end loop;
+			
+			
+			
+			if (shipsalive = '0') then
+				state <= "10";
+			elsif (lost_game = '1') then
+				state <= "11";
+			else
 				state <= "01";
+			end if;
+
+
+
+		when "10" => --win screen
+			if (button(0) = '1' or button(1) = '1' or button(2) = '1' or button(3) = '1') then
+				state <= "00";
 			else
 				state <= "10";
 			end if;
 			
-		when "11" =>
-			if (button(3) = '1') then --start screen
-				pos_x <= to_unsigned(500, 10);
-				pos_y <= to_unsigned(450, 10);
-				enemy_x <= to_unsigned(300, 10);
-				enemy_y <= to_unsigned(200, 10);
-				RAM(0)(0) <= '1';
-				RAM(1)(0) <= '1';
-				RAM(0)(1) <= '1';
-				RAM(1)(1) <= '1';
-				state <= "01";
+		when "11" => --lose screen
+			if (button(0) = '1' or button(1) = '1' or button(2) = '1' or button(3) = '1') then
+				state <= "00";
 			else
 				state <= "11";
 			end if;
@@ -183,5 +192,97 @@ end process;
 					and col < (enemy_x + 192) + 15 and col > (enemy_x + 192) - 15)else	
 			--bullet		
 			"001100" when (valid = '1' and fire = '1' and state = "01" and row < bullet_y + 5 and row > bullet_y - 5
-					and col < bullet_x + 3 and col > bullet_x - 3)else "000000";	
+					and col < bullet_x + 3 and col > bullet_x - 3) else
+					
+					
+			"111111" when (valid = '1' and state = "00" and col > 310 and col < 320 and row > 100 and row < 150)else
+			"111111" when (valid = '1' and state = "00" and col > 310 and col < 360 and row > 100 and row < 110)else
+			"111111" when (valid = '1' and state = "00" and col > 310 and col < 360 and row > 140 and row < 150)else --S
+			"111111" when (valid = '1' and state = "00" and col > 350 and col < 360 and row > 150 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 310 and col < 360 and row > 190 and row < 200)else
+
+			"111111" when (valid = '1' and state = "00" and col > 370 and col < 380 and row > 100 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 380 and col < 420 and row > 100 and row < 110)else --P
+			"111111" when (valid = '1' and state = "00" and col > 370 and col < 420 and row > 140 and row < 150)else
+			"111111" when (valid = '1' and state = "00" and col > 410 and col < 420 and row > 100 and row < 150)else
+			
+
+			"111111" when (valid = '1' and state = "00" and col > 430 and col < 440 and row > 100 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 470 and col < 480 and row > 100 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 430 and col < 480 and row > 100 and row < 110)else --A
+			"111111" when (valid = '1' and state = "00" and col > 430 and col < 480 and row > 140 and row < 150)else
+			
+			"111111" when (valid = '1' and state = "00" and col > 490 and col < 500 and row > 100 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 490 and col < 540 and row > 100 and row < 110)else
+			"111111" when (valid = '1' and state = "00" and col > 490 and col < 540 and row > 190 and row < 200)else --C
+
+			"111111" when (valid = '1' and state = "00" and col > 550 and col < 560 and row > 100 and row < 200)else
+			"111111" when (valid = '1' and state = "00" and col > 550 and col < 600 and row > 100 and row < 110)else
+			"111111" when (valid = '1' and state = "00" and col > 550 and col < 600 and row > 190 and row < 200)else --E
+			"111111" when (valid = '1' and state = "00" and col > 550 and col < 580 and row > 145 and row < 155)else
+
+			
+			"111111" when (valid = '1' and state = "00" and col > 220 and col < 230 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 200 and col < 250 and row > 250 and row < 260)else
+			"111111" when (valid = '1' and state = "00" and col > 200 and col < 250 and row > 340 and row < 350)else --I
+
+			"111111" when (valid = '1' and state = "00" and col > 260 and col < 270 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 300 and col < 310 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 265 and col < 276 and row > 250 and row < 280)else --N
+			"111111" when (valid = '1' and state = "00" and col > 274 and col < 282 and row > 270 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 280 and col < 288 and row > 290 and row < 320)else 
+			"111111" when (valid = '1' and state = "00" and col > 286 and col < 294 and row > 310 and row < 340)else
+			"111111" when (valid = '1' and state = "00" and col > 292 and col < 305 and row > 330 and row < 350)else
+			
+			"111111" when (valid = '1' and state = "00" and col > 320 and col < 327 and row > 250 and row < 280)else
+			"111111" when (valid = '1' and state = "00" and col > 325 and col < 332 and row > 270 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 330 and col < 337 and row > 290 and row < 320)else --V
+			"111111" when (valid = '1' and state = "00" and col > 335 and col < 342 and row > 310 and row < 340)else
+			"111111" when (valid = '1' and state = "00" and col > 340 and col < 347 and row > 330 and row < 350)else 
+			"111111" when (valid = '1' and state = "00" and col > 345 and col < 352 and row > 310 and row < 340)else
+			"111111" when (valid = '1' and state = "00" and col > 350 and col < 357 and row > 290 and row < 320)else
+			"111111" when (valid = '1' and state = "00" and col > 355 and col < 362 and row > 270 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 360 and col < 367 and row > 250 and row < 280)else
+
+			"111111" when (valid = '1' and state = "00" and col > 380 and col < 390 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 420 and col < 430 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 380 and col < 430 and row > 250 and row < 260)else --A
+			"111111" when (valid = '1' and state = "00" and col > 380 and col < 430 and row > 290 and row < 300)else
+		
+			"111111" when (valid = '1' and state = "00" and col > 440 and col < 450 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 480 and col < 490 and row > 260 and row < 340)else
+			"111111" when (valid = '1' and state = "00" and col > 440 and col < 480 and row > 250 and row < 260)else --D
+			"111111" when (valid = '1' and state = "00" and col > 440 and col < 480 and row > 340 and row < 350)else
+			
+			"111111" when (valid = '1' and state = "00" and col > 500 and col < 510 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 500 and col < 550 and row > 250 and row < 260)else
+			"111111" when (valid = '1' and state = "00" and col > 500 and col < 550 and row > 340 and row < 350)else --E
+			"111111" when (valid = '1' and state = "00" and col > 500 and col < 530 and row > 295 and row < 305)else
+			
+			"111111" when (valid = '1' and state = "00" and col > 560 and col < 570 and row > 250 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 560 and col < 610 and row > 250 and row < 260)else --R
+			"111111" when (valid = '1' and state = "00" and col > 560 and col < 610 and row > 290 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 600 and col < 610 and row > 250 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 560 and col < 567 and row > 300 and row < 307)else
+			"111111" when (valid = '1' and state = "00" and col > 565 and col < 572 and row > 305 and row < 312)else
+			"111111" when (valid = '1' and state = "00" and col > 570 and col < 577 and row > 310 and row < 317)else
+			"111111" when (valid = '1' and state = "00" and col > 575 and col < 582 and row > 315 and row < 322)else
+			"111111" when (valid = '1' and state = "00" and col > 580 and col < 587 and row > 320 and row < 327)else 
+			"111111" when (valid = '1' and state = "00" and col > 585 and col < 592 and row > 325 and row < 332)else
+			"111111" when (valid = '1' and state = "00" and col > 590 and col < 597 and row > 330 and row < 337)else
+			"111111" when (valid = '1' and state = "00" and col > 595 and col < 602 and row > 335 and row < 342)else
+			"111111" when (valid = '1' and state = "00" and col > 600 and col < 607 and row > 340 and row < 347)else
+			"111111" when (valid = '1' and state = "00" and col > 605 and col < 610 and row > 345 and row < 350)else
+			
+			"111111" when (valid = '1' and state = "00" and col > 620 and col < 630 and row > 250 and row < 300)else
+			"111111" when (valid = '1' and state = "00" and col > 620 and col < 670 and row > 250 and row < 260)else
+			"111111" when (valid = '1' and state = "00" and col > 620 and col < 670 and row > 290 and row < 300)else --S
+			"111111" when (valid = '1' and state = "00" and col > 660 and col < 670 and row > 300 and row < 350)else
+			"111111" when (valid = '1' and state = "00" and col > 620 and col < 670 and row > 340 and row < 350)else
+			
+			"111111" when (valid = '1' and state = "11" and col > 400 and col < 430 and row > 200 and row < 400)else
+			"111111" when (valid = '1' and state = "11" and col > 400 and col < 480 and row > 370 and row < 400)else --L
+			
+			"000011" when (valid = '1' and state = "10")else
+			"110000" when (valid = '1' and state = "11")else "000000";
 end;
