@@ -58,7 +58,7 @@ port(
 	col : in unsigned(9 downto 0);
 	valid : in std_logic;
 	button: in std_logic_vector(7 downto 0);
-	rgb : out std_logic_vector(5 downto 0)
+	rgb_out : out std_logic_vector(5 downto 0)
 	);
 end component;
 
