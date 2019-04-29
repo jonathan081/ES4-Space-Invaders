@@ -317,7 +317,8 @@ begin
 			"111111" when (valid = '1' and col > 380 and col < 390 and row > 250 and row < 350)else
 			"111111" when (valid = '1' and col > 420 and col < 430 and row > 250 and row < 350)else
 			"111111" when (valid = '1' and col > 380 and col < 430 and row > 250 and row < 260)else --O
-			"111111" when (valid = '1' and col > 380 and col < 430 and row > 340 and row < 350)else	
+			"111111" when (valid = '1' and col > 380 and col < 430 and row > 340 and row < 350)else
+
 			"111111" when (valid = '1' and col > 440 and col < 450 and row > 250 and row < 350)else
 			"111111" when (valid = '1' and col > 480 and col < 490 and row > 250 and row < 350)else --U
 			"111111" when (valid = '1' and col > 440 and col < 490 and row > 340 and row < 350)else 
